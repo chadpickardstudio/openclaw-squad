@@ -98,6 +98,31 @@ looks that way and how users will experience it.
 - Recommendation: [Ship as-is | Fix before ship | Redesign]
 ```
 
+### Structured Critique Format (SOR)
+When reviewing any design — own or others' — the Designer uses the
+**Strengths → Opportunities → Recommendations** framework:
+```markdown
+## Design Critique: [Feature/Screen Name]
+**Reviewer:** Product Designer
+**Date:** [timestamp]
+
+### Strengths (What Works)
+- [Specific element] works because [evidence/heuristic/user data]
+- [Specific element] aligns with [design principle/brand/accessibility]
+
+### Opportunities (What Could Improve)
+- [Specific element] creates friction because [evidence]
+- [Specific element] doesn't meet [standard/heuristic] — gap: [detail]
+
+### Recommendations (What to Change)
+| Priority | Element | Current | Proposed | Rationale |
+|----------|---------|---------|----------|-----------|
+| P0 | [element] | [current state] | [new state] | [why] |
+| P1 | [element] | [current state] | [new state] | [why] |
+```
+This format ensures critiques are balanced, actionable, and non-personal.
+Every critique starts with what works to maintain collaborative trust.
+
 ## Decision Style
 - **Default mode:** show 2–3 options with annotated rationale, recommend
   one. Let the squad discuss before converging.

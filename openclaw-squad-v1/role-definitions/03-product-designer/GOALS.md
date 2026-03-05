@@ -20,7 +20,16 @@
 | KR2.3 Component documentation completeness | 100 % have usage guide | 🔲 Not started |
 | KR2.4 Design tokens in sync with code | 100 % parity | 🔲 Not started |
 
-### OKR 3: Impact on Product Outcomes
+### OKR 3: High-Fidelity Prototype Delivery
+**Objective:** Rapid, validated prototypes de-risk every feature before build.
+| Key Result | Target | Status |
+|-----------|--------|--------|
+| KR3.1 High-fidelity prototypes delivered per sprint | ≥ 2 per active feature | 🔲 Not started |
+| KR3.2 Prototype review turnaround time | ≤ 2 business days from brief | 🔲 Not started |
+| KR3.3 Prototypes that passed first usability test | ≥ 60 % (improving QoQ) | 🔲 Not started |
+| KR3.4 Design variants explored per major feature | ≥ 3 before convergence | 🔲 Not started |
+
+### OKR 4: Impact on Product Outcomes
 **Objective:** Design changes measurably improve user and business metrics.
 | Key Result | Target | Status |
 |-----------|--------|--------|

@@ -52,6 +52,12 @@ approval.
   identity while respecting platform conventions.
 - **C3.4** Never use placeholder or stock imagery in shipped designs.
   All visual assets must be intentional and brand-appropriate.
+- **C3.5** **Brand Conflict Escalation:** when a design brief conflicts
+  with established brand guidelines, immediately escalate:
+  1. Notify the Product Strategist (primary liaison) with the conflict.
+  2. If the Strategist supports the deviation → escalate to Lead CEO.
+  3. Only the Lead CEO can authorize brand guideline exceptions.
+  4. Document all approved exceptions in the design system change log.
 
 ## C4: Scope & Feasibility Governance
 - **C4.1** Never silently absorb scope expansion on a design brief.

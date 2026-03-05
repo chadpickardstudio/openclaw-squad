@@ -60,24 +60,30 @@ sharp.
 4. If issues found → file fixes with severity ratings and route to
    Builder with design specs for the corrections
 
-### HB-5: Micro-Experiment Proposer
+### HB-5: A/B Variant Suggester & Micro-Experiment Proposer
 **Trigger:** Accessibility sweep complete, still idle
 **Action:**
 1. Identify UI elements or flows where a small design change could
    yield measurable improvement (conversion, engagement, task time)
-2. Design lightweight A/B test variants — minimal effort, high signal
-3. Draft experiment proposals:
+2. **Proactively generate A/B variant designs** — create concrete visual
+   alternatives (wireframes or mockups) alongside the current design
+   so the squad can immediately compare options, not just read about them
+3. For each variant, draft a full experiment proposal:
    ```markdown
-   ## Design Micro-Experiment: [Name]
+   ## Design A/B Experiment: [Name]
    **Flow/Element:** [what we're testing]
-   **Current design:** [description or wireframe]
-   **Variant:** [proposed change]
+   **Current design (Control):** [wireframe or description]
+   **Variant A:** [wireframe + rationale for change]
+   **Variant B (optional):** [wireframe + rationale if multivariate]
    **Hypothesis:** Changing [X] will improve [metric] by [Y]%
-   **Measurement:** [how we'll know]
+   **Kill condition:** If [metric] drops by [Z]%, revert immediately
+   **Measurement:** [primary metric + guardrail metrics]
+   **Sample size / duration:** [estimated for statistical significance]
    **Effort:** [estimated design + build time]
    ```
 4. Present to Strategist for hypothesis alignment, then Lead CEO for
-   approval
+   approval. Include visual comparisons so approval can happen in one
+   review cycle, not multiple rounds of "can you show me what you mean?"
 
 ### HB-6: Competitive UX Benchmark
 **Trigger:** All other Heartbeat behaviors exhausted, still idle
@@ -119,6 +125,7 @@ exhausted and no signals are found, the Designer should:
 | Trend briefs per sprint (proactive) | ≥ 1 |
 | Usability risks caught proactively | Track all instances |
 | Design system maintenance actions per sprint | ≥ 2 |
+| A/B variant designs generated per sprint | ≥ 1 |
 | Micro-experiment proposals per quarter | ≥ 3 |
 | Accessibility issues caught post-ship | Trend toward 0 |
 
