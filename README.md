@@ -14,60 +14,48 @@ Every blueprint in this repo is grounded in 21 deep-dive research topics coverin
 agent architecture, coordination, security, memory, evolution, cost optimization,
 and the Lead-as-CEO paradigm.
 
-The factory ships two complementary systems:
-
-1. **Departments** — self-contained business units (Sales, Marketing, Finance,
-   etc.) each with their own blueprint, roles, and coordination patterns
-2. **Role Definitions** — individual specialist agents that can be mixed across
-   departments or assembled into custom squads
-
-**Mix any departments to create custom client teams.** Need a startup package?
-Combine Executive Leadership + Product Engineering + Marketing. Need an
-enterprise ops team? Combine Operations + Finance + Legal Compliance +
-Data Analytics. The system is modular by design.
-
 ---
 
-## Departments
+## Agents (Single Source of Truth)
 
-Eleven production-ready department blueprints, each a complete business unit:
-
-| # | Department | Folder | Focus |
-|---|-----------|--------|-------|
-| 01 | Executive Leadership | [`departments/executive-leadership/`](openclaw-squad-v1/departments/executive-leadership/) | C-suite strategy, vision, cross-dept coordination |
-| 02 | Sales | [`departments/sales/`](openclaw-squad-v1/departments/sales/) | Pipeline, prospecting, closing, revenue targets |
-| 03 | Marketing | [`departments/marketing/`](openclaw-squad-v1/departments/marketing/) | Campaigns, brand, content, demand generation |
-| 04 | Customer Success | [`departments/customer-success/`](openclaw-squad-v1/departments/customer-success/) | Onboarding, adoption, expansion, retention |
-| 05 | Customer Support | [`departments/customer-support/`](openclaw-squad-v1/departments/customer-support/) | Tickets, SLAs, knowledge base, escalation |
-| 06 | Operations | [`departments/operations/`](openclaw-squad-v1/departments/operations/) | Infrastructure, processes, efficiency, uptime |
-| 07 | Finance | [`departments/finance/`](openclaw-squad-v1/departments/finance/) | Budgets, forecasting, billing, financial reporting |
-| 08 | HR & People | [`departments/hr-people/`](openclaw-squad-v1/departments/hr-people/) | Hiring, culture, performance, team health |
-| 09 | Legal & Compliance | [`departments/legal-compliance/`](openclaw-squad-v1/departments/legal-compliance/) | Contracts, regulatory, privacy, risk management |
-| 10 | Data & Analytics | [`departments/data-analytics/`](openclaw-squad-v1/departments/data-analytics/) | BI, metrics, data pipelines, insights |
-| 11 | Product & Engineering | [`departments/product-engineering/`](openclaw-squad-v1/departments/product-engineering/) | Product strategy, design, development, QA |
-
-Each department folder contains a `department-blueprint.md` that will be
-populated with elite-grade role definitions, coordination patterns, and
-ready-to-deploy configurations.
-
----
-
-## Role Definitions (Layer 1.5)
-
-Seven elite specialist roles, each defined across 8 configuration files:
-
-| # | Role | Folder |
-|---|------|--------|
-| 01 | Lead CEO | [`role-definitions/01-lead-ceo/`](openclaw-squad-v1/role-definitions/01-lead-ceo/) |
-| 02 | Product Strategist | [`role-definitions/02-product-strategist/`](openclaw-squad-v1/role-definitions/02-product-strategist/) |
-| 03 | Product Designer | [`role-definitions/03-product-designer/`](openclaw-squad-v1/role-definitions/03-product-designer/) |
-| 04 | System Architect | [`role-definitions/04-system-architect/`](openclaw-squad-v1/role-definitions/04-system-architect/) |
-| 05 | Builder | [`role-definitions/05-builder/`](openclaw-squad-v1/role-definitions/05-builder/) |
-| 06 | Ops Guardian | [`role-definitions/06-ops-guardian/`](openclaw-squad-v1/role-definitions/06-ops-guardian/) |
-| 07 | Growth & Compliance Specialist | [`role-definitions/07-growth-compliance-specialist/`](openclaw-squad-v1/role-definitions/07-growth-compliance-specialist/) |
-
-Each role includes: `IDENTITY.md`, `SOUL.md`, `skills.md`, `STYLE.md`,
+All agent role definitions live under `agents/`, organized by department.
+Each role has 8 files: `IDENTITY.md`, `SOUL.md`, `skills.md`, `STYLE.md`,
 `GOALS.md`, `CONSTRAINTS.md`, `EVOLUTION.md`, `HEARTBEAT.md`
+
+| # | Department | Folder | Roles |
+|---|-----------|--------|-------|
+| 01 | Executive Leadership | [`agents/executive-leadership/`](openclaw-squad-v1/agents/executive-leadership/) | CEO, Chief of Staff, … |
+| 02 | Sales | [`agents/sales/`](openclaw-squad-v1/agents/sales/) | SDR, AE, Sales Ops, Sales Manager, … |
+| 03 | Marketing | [`agents/marketing/`](openclaw-squad-v1/agents/marketing/) | Content, Demand Gen, Brand, … |
+| 04 | Customer Success | [`agents/customer-success/`](openclaw-squad-v1/agents/customer-success/) | Onboarding, Adoption, Expansion, … |
+| 05 | Customer Support | [`agents/customer-support/`](openclaw-squad-v1/agents/customer-support/) | Tickets, SLAs, Knowledge Base, … |
+| 06 | Operations | [`agents/operations/`](openclaw-squad-v1/agents/operations/) | Infrastructure, Processes, Uptime, … |
+| 07 | Finance | [`agents/finance/`](openclaw-squad-v1/agents/finance/) | Budgets, Forecasting, Billing, … |
+| 08 | HR & People | [`agents/hr-people/`](openclaw-squad-v1/agents/hr-people/) | Hiring, Culture, Performance, … |
+| 09 | Legal & Compliance | [`agents/legal-compliance/`](openclaw-squad-v1/agents/legal-compliance/) | Contracts, Regulatory, Privacy, … |
+| 10 | Data & Analytics | [`agents/data-analytics/`](openclaw-squad-v1/agents/data-analytics/) | BI, Metrics, Data Pipelines, … |
+| 11 | Product & Engineering | [`agents/product-engineering/`](openclaw-squad-v1/agents/product-engineering/) | 7 elite roles (Lead CEO, Strategist, Designer, Architect, Builder, Ops Guardian, Growth Specialist) |
+
+---
+
+## Department Blueprints
+
+Lightweight recipes that reference `agents/` roles. Each describes how a
+department operates, its coordination patterns, and ready-to-deploy configs.
+
+| # | Blueprint |
+|---|-----------|
+| 01 | [`executive-leadership-department.md`](openclaw-squad-v1/department-blueprints/executive-leadership-department.md) |
+| 02 | [`sales-department.md`](openclaw-squad-v1/department-blueprints/sales-department.md) |
+| 03 | [`marketing-department.md`](openclaw-squad-v1/department-blueprints/marketing-department.md) |
+| 04 | [`customer-success-department.md`](openclaw-squad-v1/department-blueprints/customer-success-department.md) |
+| 05 | [`customer-support-department.md`](openclaw-squad-v1/department-blueprints/customer-support-department.md) |
+| 06 | [`operations-department.md`](openclaw-squad-v1/department-blueprints/operations-department.md) |
+| 07 | [`finance-department.md`](openclaw-squad-v1/department-blueprints/finance-department.md) |
+| 08 | [`hr-people-department.md`](openclaw-squad-v1/department-blueprints/hr-people-department.md) |
+| 09 | [`legal-compliance-department.md`](openclaw-squad-v1/department-blueprints/legal-compliance-department.md) |
+| 10 | [`data-analytics-department.md`](openclaw-squad-v1/department-blueprints/data-analytics-department.md) |
+| 11 | [`product-engineering-department.md`](openclaw-squad-v1/department-blueprints/product-engineering-department.md) |
 
 ---
 
@@ -98,8 +86,8 @@ topics. Key research that directly powers every blueprint:
 
 ## Quick Start
 
-1. **Pick a department** from the table above — or combine multiple
-2. **Pick roles** from role-definitions/ to staff your department
+1. **Pick a department** from the agents table above — or combine multiple
+2. **Pick roles** from `agents/<department>/` to staff your team
 3. Copy the configuration into Claude Code or your OpenClaw CLI
 4. Your squad spins up, ready to work
 
@@ -108,29 +96,27 @@ topics. Key research that directly powers every blueprint:
 ## Repository Structure
 
 ```
-openclaw-squad/
-├── README.md                              ← You are here
-├── openclaw-squad-v1/
-│   ├── departments/                       ← 11 business unit blueprints
-│   │   ├── executive-leadership/
-│   │   ├── sales/
-│   │   ├── marketing/
-│   │   ├── customer-success/
-│   │   ├── customer-support/
-│   │   ├── operations/
-│   │   ├── finance/
-│   │   ├── hr-people/
-│   │   ├── legal-compliance/
-│   │   ├── data-analytics/
-│   │   └── product-engineering/
-│   ├── role-definitions/                  ← 7 elite specialist roles (8 files each)
-│   ├── squad-blueprints/                  ← Ready-to-spin squad configs
-│   ├── research/                          ← 21 deep-dive research topics
-│   ├── agents/                            ← Agent templates
-│   ├── blueprints/                        ← Architecture blueprints
-│   ├── decisions/                         ← Design decisions
-│   ├── scripts/                           ← Automation scripts
-│   └── spec/                              ← Specifications
+openclaw-squad-v1/
+├── agents/                          ← SINGLE SOURCE OF TRUTH for every elite agent role
+│   ├── executive-leadership/
+│   ├── sales/
+│   ├── marketing/
+│   ├── customer-success/
+│   ├── customer-support/
+│   ├── operations/
+│   ├── finance/
+│   ├── hr-people/
+│   ├── legal-compliance/
+│   ├── data-analytics/
+│   └── product-engineering/         ← 7 elite roles (8 files each)
+├── department-blueprints/           ← Lightweight recipes (references agents/)
+│   ├── sales-department.md
+│   ├── marketing-department.md
+│   └── ...
+├── squad-blueprints/                ← Custom client mixes
+├── research/                        ← 21 deep-dive topics
+├── decisions/                       ← Architectural Decision Records
+└── spec/                            ← Living Specification
 ```
 
 ---
