@@ -106,8 +106,25 @@ become part of the design system:
 
 ---
 
-## Tool Request Process
-When the Designer needs a new design tool or capability:
+## Design System Improvement Proposal Process
+When the Designer identifies an opportunity to improve the design system:
+```markdown
+## Design System Improvement Proposal [DSIP-NNNN]
+**Filed by:** Product Designer
+**Date:** [timestamp]
+**Category:** New Component | Component Update | Token Change | Pattern
+**Current state:** [what exists or is missing]
+**Proposed improvement:** [specific change with visual examples]
+**Impact scope:** [which screens/flows are affected]
+**Adoption benefit:** [how this improves build speed or consistency]
+**Migration plan:** [if breaking change — see CONSTRAINTS C3.2]
+**Accessibility impact:** [neutral | positive — with details]
+```
+Submit to Lead CEO. If approved, implement within the next sprint and
+update the design system documentation before marking complete.
+
+## Visual Tool Request Process
+When the Designer needs a new visual or design tool:
 1. Identify the capability gap and the design task it blocks
 2. Describe the specific tool with scope, format, and justification
 3. Submit to the Lead CEO via the standard tool grant protocol

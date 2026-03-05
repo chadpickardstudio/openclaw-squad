@@ -17,28 +17,48 @@ Permanently enabled tools that define the Designer's baseline.
   structure and flow before investing in visual polish. Speed of
   iteration matters more than beauty at this stage.
 
-### 1.2 Image Generator (Rapid Prototyping)
+### 1.2 Markdown Prototyping Engine
+- **Tool:** `prototype_markdown(screens[], interactions[], notes[])`
+- **Why:** Before any visual work, the Designer needs to prototype
+  structure and content hierarchy in pure markdown. This tool renders
+  clickable text-based prototypes that the Strategist and Builder can
+  review in any environment — no design tool required. It forces
+  content-first thinking and catches information architecture problems
+  before pixels enter the picture.
+
+### 1.3 Image Generator (Rapid Mockups)
 - **Tool:** `image_gen(prompt, style, dimensions, design_system_ref?)`
 - **Why:** When higher-fidelity visual exploration is needed, the
-  Designer generates concept images to test visual direction, color
+  Designer generates concept mockups to test visual direction, color
   palettes, and layout compositions. This replaces hours of manual
   mockup work with rapid exploration of the visual design space.
+  Use for: mood boards, layout explorations, visual style comparisons.
 
-### 1.3 Heuristic Evaluator
+### 1.4 Figma-Like Component Renderer
+- **Tool:** `render_component(component_spec, tokens, state="default")`
+- **States:** default | hover | active | focus | disabled | error | loading
+- **Why:** For detailed component design, the Designer needs a tool that
+  renders individual UI components with design system tokens applied,
+  showing all interaction states. This bridges the gap between abstract
+  wireframes and production-ready specs, giving the Builder a precise
+  visual target for implementation.
+
+### 1.6 Heuristic Evaluator
 - **Tool:** `evaluate_heuristics(design_artifact, framework="nielsen|shneiderman|custom")`
 - **Why:** Every design must pass a structured heuristic evaluation
   before user testing. This tool applies established UX heuristic
   frameworks systematically, catching usability issues the Designer's
   intuition might miss due to familiarity bias.
 
-### 1.4 Accessibility Auditor
+### 1.7 Accessibility Auditor
 - **Tool:** `audit_accessibility(design_artifact, standard="WCAG2.2-AA")`
 - **Why:** Accessibility compliance is non-negotiable (see CONSTRAINTS.md).
   This tool checks color contrast ratios, touch target sizes, screen
   reader compatibility, keyboard navigation paths, and focus order
   against WCAG 2.2 AA standards on every design before handoff.
+  Runs automatically on every artifact before it leaves the Designer.
 
-### 1.5 Design System Manager
+### 1.8 Design System Manager
 - **Tool:** `manage_design_system(action, component?, tokens?)`
 - **Actions:** list | get | create | update | deprecate | audit_coverage
 - **Why:** The design system is the Designer's most powerful leverage
@@ -46,7 +66,7 @@ Permanently enabled tools that define the Designer's baseline.
   drift, and ensure brand coherence. This tool manages the living
   system — adding components, updating tokens, and tracking adoption.
 
-### 1.6 Artifact Reader (Read-Only)
+### 1.9 Artifact Reader (Read-Only)
 - **Tool:** `read_artifact(artifact_id, role_owner)`
 - **Why:** The Designer must read Strategist specs, Architect technical
   constraints, and Builder implementation questions to produce designs

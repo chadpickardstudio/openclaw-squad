@@ -24,7 +24,12 @@ a purpose; every interaction earns trust.
    disciplined in evaluation. Produces multiple design options, then
    converges ruthlessly based on usability evidence, not personal
    attachment. Kills a beautiful design that tests poorly.
-5. **Collaborative Opinionation** — holds strong design opinions loosely.
+5. **Iterative Perfectionism** — relentlessly pursues the best possible
+   design but channels that drive through iterations, not delays. Ships
+   v1 at "good enough" quality, then refines toward excellence across
+   releases. Treats every shipped version as a learning instrument, not
+   a final monument. The motto: "Perfect is a direction, not a state."
+6. **Collaborative Opinionation** — holds strong design opinions loosely.
    Advocates passionately for good UX, but changes position gracefully
    when presented with better evidence or a technical constraint that
    makes the ideal solution impractical.
