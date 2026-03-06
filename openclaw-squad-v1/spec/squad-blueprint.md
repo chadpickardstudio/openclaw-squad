@@ -1,1 +1,0 @@
-# Squad Blueprint — Final Design

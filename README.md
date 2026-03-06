@@ -1,115 +1,82 @@
-# OpenClaw Squad Factory
+# OpenClaw Squad
 
-> **Elite AI Departments for Any Business — Mix and Match to Build Custom Client Teams**
+AI consultancy system for deploying autonomous agent teams to small businesses and solo founders.
 
-Built on 21 deep research topics. One prompt → full squad ready to work.
-
----
-
-## What Is This?
-
-OpenClaw Squad Factory is a research-backed blueprint system for launching
-production-grade multi-agent AI squads using [OpenClaw](https://docs.openclaw.ai).
-Every blueprint in this repo is grounded in 21 deep-dive research topics covering
-agent architecture, coordination, security, memory, evolution, cost optimization,
-and the Lead-as-CEO paradigm.
-
----
-
-## Agents — Single Source of Truth
-
-All elite agent roles live in `agents/` grouped by department.
-Each role has its own folder with 8 elite files:
-`IDENTITY.md`, `SOUL.md`, `skills.md`, `STYLE.md`,
-`GOALS.md`, `CONSTRAINTS.md`, `EVOLUTION.md`, `HEARTBEAT.md`
-
-Each department folder also contains a `department-blueprint.md` describing
-how the department operates, its coordination patterns, and deploy configs.
-
-| # | Department | Folder | Status |
-|---|-----------|--------|--------|
-| 01 | Executive Leadership | [`agents/executive-leadership/`](openclaw-squad-v1/agents/executive-leadership/) | Blueprint ready, roles pending |
-| 02 | Sales | [`agents/sales/`](openclaw-squad-v1/agents/sales/) | Blueprint ready, roles pending |
-| 03 | Marketing | [`agents/marketing/`](openclaw-squad-v1/agents/marketing/) | Blueprint ready, roles pending |
-| 04 | Customer Success | [`agents/customer-success/`](openclaw-squad-v1/agents/customer-success/) | Blueprint ready, roles pending |
-| 05 | Customer Support | [`agents/customer-support/`](openclaw-squad-v1/agents/customer-support/) | Blueprint ready, roles pending |
-| 06 | Operations | [`agents/operations/`](openclaw-squad-v1/agents/operations/) | Blueprint ready, roles pending |
-| 07 | Finance | [`agents/finance/`](openclaw-squad-v1/agents/finance/) | Blueprint ready, roles pending |
-| 08 | HR & People | [`agents/hr-people/`](openclaw-squad-v1/agents/hr-people/) | Blueprint ready, roles pending |
-| 09 | Legal & Compliance | [`agents/legal-compliance/`](openclaw-squad-v1/agents/legal-compliance/) | Blueprint ready, roles pending |
-| 10 | Data & Analytics | [`agents/data-analytics/`](openclaw-squad-v1/agents/data-analytics/) | Blueprint ready, roles pending |
-| 11 | Product & Engineering | [`agents/product-engineering/`](openclaw-squad-v1/agents/product-engineering/) | 7 elite roles complete |
-
----
-
-## Squad Blueprints
-
-| # | Blueprint | Agents | Best For |
-|---|-----------|--------|----------|
-| 01 | [Elite Software & App Development Team](openclaw-squad-v1/squad-blueprints/01-software-app-team.md) | 7 | Building any web/app/software product from idea to full launch |
-
-*More blueprints coming — each one is a complete, copy-paste-ready squad.*
-
----
-
-## Research Foundation
-
-All blueprints are built on the `/research` directory containing 21 deep-dive
-topics. Key research that directly powers every blueprint:
-
-- **Topic 3–5**: Multi-agent coordination, bindings, session routing
-- **Topic 6**: Security sandboxing, ClawVault secrets, tool policies
-- **Topic 9**: Memory hygiene, distillation, context management
-- **Topic 12**: Scalability — optimal squad sizes, hierarchical Leads
-- **Topic 19**: Tool tiering — safe auto-grant vs. human-gated
-- **Topic 20**: Agent evolution — reflection loops, self-improvement
-- **Topic 21**: Lead-as-CEO — autonomous tool grants, enabling growth
-
----
-
-## Quick Start
-
-1. **Pick a department** from the agents table above — or combine multiple
-2. **Pick roles** from `agents/<department>/` to staff your team
-3. Copy the configuration into Claude Code or your OpenClaw CLI
-4. Your squad spins up, ready to work
+**Read the full mission:** [MISSION.md](MISSION.md)
 
 ---
 
 ## Repository Structure
 
+| Directory | Purpose | Status |
+|-----------|---------|--------|
+| `research/` | 21 deep research documents covering agent architecture, security, coordination, cost, memory, evolution, and more. The knowledge foundation for everything we build. | Complete |
+| `agents/` | Universal agent library. 15 portable specialist roles (Lead + 14 specialists) that can be mixed and matched into any squad. | Scaffolded — blueprints pending |
+| `squad-blueprints/` | Per-vertical team compositions. Pre-built squad configs for specific business types (gym, law firm, restaurant, etc.). | Pending |
+| `discovery/` | Client onboarding templates. Frameworks for running discovery sessions and mapping business needs to agent squads. | Pending |
+
+## Workflow
+
 ```
-openclaw-squad-v1/
-├── agents/                              ← SINGLE SOURCE OF TRUTH
-│   ├── executive-leadership/
-│   │   ├── department-blueprint.md
-│   │   └── 01-ceo/                      (8 files each, when populated)
-│   ├── sales/
-│   │   ├── department-blueprint.md
-│   │   └── 01-sales-dev-rep/            (pending)
-│   ├── marketing/
-│   ├── customer-success/
-│   ├── customer-support/
-│   ├── operations/
-│   ├── finance/
-│   ├── hr-people/
-│   ├── legal-compliance/
-│   ├── data-analytics/
-│   └── product-engineering/
-│       ├── department-blueprint.md
-│       ├── 01-lead-ceo/                 (8 files)
-│       ├── 02-product-strategist/       (8 files)
-│       ├── 03-product-designer/         (8 files)
-│       ├── 04-system-architect/         (8 files)
-│       ├── 05-builder/                  (8 files)
-│       ├── 06-ops-security-guardian/    (8 files)
-│       └── 07-growth-compliance/        (8 files)
-├── squad-blueprints/                    ← Custom client mixes
-├── research/                            ← 21 deep-dive topics
-├── decisions/                           ← ADRs
-└── spec/                                ← Living Specification
+Discovery → Team Selection → Configuration → Deployment → Ongoing Evolution
 ```
+
+1. Meet the founder, understand their business
+2. Select agents from the universal library
+3. Configure each agent's identity, goals, constraints, and skills
+4. Deploy the squad connected to the founder's tools and channels
+5. Squad runs autonomously; agents evolve and improve over time
+
+## Research Library
+
+The `/research/` directory contains the foundational research that informs every agent blueprint and squad configuration:
+
+| # | Topic | Key Takeaway |
+|---|-------|-------------|
+| 01 | Folder Structure | Two-layer architecture, per-agent workspace isolation |
+| 02 | Skills | SKILL.md format, dynamic tool provisioning, security vetting |
+| 03 | API Cost | Hybrid model routing, under $10/month for full squads |
+| 04 | Independence | Per-agent isolation is non-negotiable, shared state fails |
+| 05 | Coordination | Loose binding-based dispatch, Lead routes dynamically |
+| 06 | Security | Docker sandboxing, tool policies, secrets vault, prompt guards |
+| 07 | Hybrid Setup | Premium cloud for Lead, free local models for workers |
+| 08 | Prompt Engineering | SOUL.md patterns, anti-yes-man, reflection loops |
+| 09 | Context Management | Layered memory (L1-L4), auto-compaction, vector search |
+| 10 | Error Recovery | Fallback chains, graceful degradation, self-healing |
+| 11 | Personality Tuning | SOUL.md personality, conflict resolution, AURA protocol |
+| 12 | Scalability | 5-19 agent ceilings, burnout prevention, horizontal scaling |
+| 13 | Audit & Observability | OTel tracing, LangFuse, cost spike detection |
+| 14 | Tool Chaining | Skill discovery, ClawHub marketplace, tiered approval |
+| 15 | Backup & Rollback | Git snapshots, encrypted archives, disaster recovery |
+| 16 | Testing Frameworks | Agent testing patterns, quality assurance |
+| 17 | Legal Compliance | GDPR, CCPA, HIPAA guardrails, operator obligations |
+| 18 | Model Migration | Model-agnostic architecture, zero-rewrite migration |
+| 19 | Tool Access Tiering | 4-tier system, Lead grants capabilities progressively |
+| 20 | Agent Evolution | Self-improvement loops, reflection, supervised growth |
+| 21 | Lead-as-CEO | Orchestrator authority, tool granting, squad oversight |
+
+## Agent Library
+
+15 universal, portable agent roles. Each agent is business-agnostic and reports to whichever Lead is in their squad:
+
+| # | Agent | Capability |
+|---|-------|-----------|
+| 00 | Lead | Squad orchestrator, task routing, quality enforcement |
+| 01 | Content Creator | Social media, copywriting, visual content, brand voice |
+| 02 | Market Researcher | Competitor analysis, trends, audience insights |
+| 03 | Sales Rep | Prospecting, outreach, follow-up, pipeline |
+| 04 | Client Manager | Onboarding, retention, relationships |
+| 05 | Support Agent | Customer support, FAQ, escalation |
+| 06 | Strategist | Business strategy, campaigns, growth |
+| 07 | Data Analyst | Reporting, dashboards, performance analysis |
+| 08 | Bookkeeper | Invoicing, expenses, financial tracking |
+| 09 | Ops Manager | Process optimisation, vendors, logistics |
+| 10 | Recruiter | Talent sourcing, screening, coordination |
+| 11 | Compliance Officer | Regulatory, data privacy, legal |
+| 12 | Engineer | Technical builds, integrations, automation |
+| 13 | Designer | UI/UX, visual assets, brand materials |
+| 14 | System Architect | Infrastructure, security, scaling |
 
 ---
 
-**Built for Chad Pickard Studio Agency**
+Built by Chad Pickard Studio.
