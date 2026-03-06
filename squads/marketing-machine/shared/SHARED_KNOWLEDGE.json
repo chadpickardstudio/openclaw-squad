@@ -1,0 +1,28 @@
+{
+  "squad": "marketing-machine",
+  "version": "1.0.0",
+  "brand": {
+    "name": "",
+    "tagline": "",
+    "voice": "",
+    "audience": "",
+    "positioning": ""
+  },
+  "content": {
+    "pillars": [],
+    "keywordTargets": [],
+    "contentCalendar": [],
+    "styleGuide": ""
+  },
+  "campaigns": {
+    "active": [],
+    "completed": [],
+    "planned": []
+  },
+  "competitors": [],
+  "metrics": {
+    "kpis": [],
+    "benchmarks": {}
+  },
+  "decisions": []
+}

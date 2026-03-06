@@ -1,0 +1,20 @@
+{
+  "squad": "department",
+  "version": "1.0.0",
+  "brand": {
+    "name": "",
+    "tagline": "",
+    "voice": "",
+    "audience": ""
+  },
+  "product": {
+    "name": "",
+    "description": "",
+    "pricing": "",
+    "competitors": []
+  },
+  "clients": [],
+  "vendors": [],
+  "processes": [],
+  "decisions": []
+}

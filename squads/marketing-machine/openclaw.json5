@@ -1,0 +1,171 @@
+// The Marketing Machine — Tier 3 Squad Configuration
+// 7 agents: Lead + Content Creator + Social Media Manager + Email Marketer
+//           + Market Researcher + Data Analyst + Sales Rep
+{
+  "agents": {
+    "defaults": {
+      "model": { "primary": "anthropic/claude-sonnet-4-6" },
+      "tools": {
+        "profile": "minimal",
+        "allow": ["read", "write", "sessions_send"],
+        "deny": ["exec", "sudo"],
+      },
+      "sandbox": {
+        "mode": "all",
+        "workspaceAccess": "rw",
+        "networkAccess": "restricted",
+      },
+      "compaction": {
+        "mode": "safeguard",
+        "reserveTokensFloor": 15000,
+        "memoryFlush": {
+          "enabled": true,
+          "softThresholdTokens": 3000,
+        },
+      },
+      "memory": {
+        "backend": "qmd",
+        "hybrid": {
+          "enabled": true,
+          "vectorWeight": 0.7,
+          "textWeight": 0.3,
+          "mmr": { "enabled": true, "lambda": 0.7 },
+          "temporalDecay": { "halfLifeDays": 30 },
+        },
+      },
+      "heartbeat": {
+        "every": "2h",
+        "max_turns": 2,
+        "enabled": true,
+      },
+    },
+
+    "list": [
+      // === C-SUITE ===
+      {
+        "id": "lead",
+        "default": true,
+        "name": "Lead (CEO / Chief of Staff)",
+        "workspace": "~/.openclaw/workspace-lead",
+        "agentDir": "~/.openclaw/agents/lead/agent",
+        "model": {
+          "primary": "anthropic/claude-opus-4-6",
+          "fallbacks": ["anthropic/claude-sonnet-4-6"],
+        },
+        "tools": {
+          "profile": "full",
+          "allow": [
+            "read", "write", "edit",
+            "sessions_spawn", "sessions_send", "sessions_list",
+            "memory_search", "fs_read", "fs_write",
+          ],
+          "deny": ["exec", "sudo"],
+        },
+        "heartbeat": { "every": "30m", "max_turns": 3, "enabled": true },
+      },
+
+      // === MARKETING ===
+      {
+        "id": "content-creator",
+        "name": "Content Creator (Content Writer)",
+        "workspace": "~/.openclaw/workspace-content-creator",
+        "agentDir": "~/.openclaw/agents/content-creator/agent",
+        "tools": {
+          "profile": "messaging",
+          "allow": ["read", "write", "edit", "sessions_send", "memory_search"],
+          "deny": ["exec", "sudo", "fs_write"],
+        },
+      },
+
+      {
+        "id": "social-media-manager",
+        "name": "Social Media Manager",
+        "workspace": "~/.openclaw/workspace-social-media-manager",
+        "agentDir": "~/.openclaw/agents/social-media-manager/agent",
+        "tools": {
+          "profile": "messaging",
+          "allow": ["read", "write", "edit", "sessions_send", "memory_search"],
+          "deny": ["exec", "sudo", "fs_write"],
+        },
+      },
+
+      {
+        "id": "email-marketer",
+        "name": "Email Marketer (Email Campaign Manager)",
+        "workspace": "~/.openclaw/workspace-email-marketer",
+        "agentDir": "~/.openclaw/agents/email-marketer/agent",
+        "tools": {
+          "profile": "messaging",
+          "allow": ["read", "write", "edit", "sessions_send", "memory_search"],
+          "deny": ["exec", "sudo", "fs_write"],
+        },
+      },
+
+      {
+        "id": "market-researcher",
+        "name": "Market Researcher (SEO / Research Analyst)",
+        "workspace": "~/.openclaw/workspace-market-researcher",
+        "agentDir": "~/.openclaw/agents/market-researcher/agent",
+        "tools": {
+          "profile": "messaging",
+          "allow": ["read", "write", "edit", "sessions_send", "memory_search", "browser"],
+          "deny": ["exec", "sudo", "fs_write"],
+        },
+        "compaction": {
+          "reserveTokensFloor": 20000,
+          "memoryFlush": { "enabled": true, "softThresholdTokens": 4000 },
+        },
+      },
+
+      {
+        "id": "data-analyst",
+        "name": "Data Analyst (Analytics & Reporting)",
+        "workspace": "~/.openclaw/workspace-data-analyst",
+        "agentDir": "~/.openclaw/agents/data-analyst/agent",
+        "tools": {
+          "profile": "messaging",
+          "allow": ["read", "write", "edit", "sessions_send", "memory_search"],
+          "deny": ["exec", "sudo", "fs_write"],
+        },
+        "compaction": {
+          "reserveTokensFloor": 20000,
+          "memoryFlush": { "enabled": true, "softThresholdTokens": 4000 },
+        },
+      },
+
+      // === SALES ===
+      {
+        "id": "sales-rep",
+        "name": "Sales Rep (BDR)",
+        "workspace": "~/.openclaw/workspace-sales-rep",
+        "agentDir": "~/.openclaw/agents/sales-rep/agent",
+        "tools": {
+          "profile": "messaging",
+          "allow": ["read", "write", "edit", "sessions_send", "memory_search"],
+          "deny": ["exec", "sudo", "fs_write"],
+        },
+      },
+    ],
+  },
+
+  "tools": {
+    "agentToAgent": {
+      "enabled": true,
+      "allow": [
+        "lead", "content-creator", "social-media-manager",
+        "email-marketer", "market-researcher", "data-analyst",
+        "sales-rep",
+      ],
+    },
+  },
+
+  "bindings": [
+    { "channel": "default", "agent": "lead" },
+    { "channel": "content", "agent": "content-creator" },
+    { "channel": "social", "agent": "social-media-manager" },
+    { "channel": "email", "agent": "email-marketer" },
+    { "channel": "research", "agent": "market-researcher" },
+    { "channel": "analytics", "agent": "data-analyst" },
+    { "channel": "sales", "agent": "sales-rep" },
+  ],
+}
