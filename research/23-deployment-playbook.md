@@ -80,12 +80,12 @@ The minimum viable squad for a solo founder or micro-business.
 
 | Agent | Role | Model Tier |
 |-------|------|------------|
-| Lead (00) | CEO / Orchestrator | Pro (Opus with Sonnet fallback) |
+| Lead (00) | CEO / Orchestrator | Pro (Sonnet primary, Opus for escalation) |
 | Content Creator (05) | Blog posts, copy, landing pages | Budget (DeepSeek V3 / Gemini Flash) |
 | Sales Rep (10) | Outreach, follow-ups, pipeline | Budget |
 | Client Manager (11) | Onboarding, retention, upsells | Budget |
 
-**Estimated monthly cost:** $6–30/month (Ref: Doc 03, hybrid routing)
+**Estimated monthly cost (optimized):** $3–8/month — Lead on Sonnet (~$2.25), 3 workers on DeepSeek/Gemini Flash (~$0.60 combined), heartbeats on local Qwen ($0). See Doc 03 Section 5 for the methodology: hybrid model routing + lean context (< 5,000 tokens per agent) + delegation + fail-fast escalation = 90–97% reduction vs. naive all-Sonnet deployment.
 
 ### 3.2 The Department (Tier 2 — 8–10 Agents)
 
@@ -101,7 +101,7 @@ Adds to The Operator:
 | Email Marketer (07) | Sequences, drips, A/B testing | Budget |
 | Strategist (01) | Marketing strategy, positioning | Pro (escalation to Opus for strategy) |
 
-**Estimated monthly cost:** $20–80/month
+**Estimated monthly cost (optimized):** $5–12/month — Lead on Sonnet (~$2.25), 1 strategy agent on Sonnet (~$1.50), 6–8 workers on DeepSeek/Gemini Flash (~$1.80 combined), heartbeats on local Qwen ($0). Ref: Doc 03 Example A shows 19 agents at $6.45/month; 8–10 agents with the same architecture scales proportionally.
 
 ### 3.3 The Marketing Machine (Tier 3 — 12–14 Agents)
 
@@ -115,7 +115,7 @@ Adds to The Department:
 | Engineer (02) | Technical implementation, integrations | Pro |
 | Compliance Officer (13) | Regulatory, data handling audits | Budget (escalation to Pro for complex) |
 
-**Estimated monthly cost:** $40–150/month
+**Estimated monthly cost (optimized):** $6–15/month — Lead on Sonnet (~$2.25), 2 strategy/pro agents on Sonnet (~$3.00), 10–12 workers on DeepSeek/Gemini Flash (~$3.60 combined), heartbeats on local Qwen ($0). Ref: Doc 03 Example A validates that a 19-agent squad runs at $6.45/month with full optimization. A 14-agent squad with 2 pro-tier agents lands in this range.
 
 **Ref:** Full roster details in Doc 22 (Agent Roster & Org Chart).
 
@@ -341,13 +341,15 @@ The Lead is not just another agent — it is the CEO of the squad. It gets confi
 
 ### 6.1 Model Assignment
 
-**The Lead MUST run on a premium or pro-tier model.**
+**The Lead MUST run on a pro-tier model or higher.** Doc 03 (Section 5, Example A) validates that Sonnet is sufficient for Lead routing, delegation, and synthesis at ~$2.25/month. Opus is available for escalation when the Lead encounters complex reasoning tasks.
 
-| Recommended | Fallback | Never |
-|-------------|----------|-------|
-| Claude Opus 4.6 | Claude Sonnet 4.6 | DeepSeek V3, Qwen, Gemini Flash |
+| Primary (Cost-Optimized) | Escalation (Complex Reasoning) | Fallback (Degraded) | Never |
+|--------------------------|-------------------------------|---------------------|-------|
+| Claude Sonnet 4.6 | Claude Opus 4.6 | DeepSeek V3 | Qwen, Gemini Flash |
 
-**Why:** The Lead makes routing decisions, delegates tasks, evaluates agent performance, and handles ambiguous requests. A cheap model makes bad routing decisions — it sends sales tasks to the content writer, misses escalation triggers, and fails to synthesise multi-agent output (Doc 03, Section 1; Doc 21, Section 2).
+**Why Sonnet, not Opus as default:** Doc 03's validated $6.45/month squad uses Sonnet for the Lead. Opus as the default increases the Lead's cost from ~$2.25 to ~$7–15/month — a 3–6x increase for marginal routing improvement. The Lead's primary job is delegation and synthesis, which Sonnet handles well. Reserve Opus for escalation: when confidence is < 80%, when multi-domain reasoning is needed, or when a previous Sonnet attempt failed (Doc 03, Section 1).
+
+**Why never a budget model:** A cheap model makes bad routing decisions — it sends sales tasks to the content writer, misses escalation triggers, and fails to synthesise multi-agent output (Doc 03, Section 1; Doc 21, Section 2).
 
 ### 6.2 Elevated Tool Access
 
@@ -552,12 +554,18 @@ openclaw secrets audit --check   # Scans for plaintext leaks
 
 ### 9.2 Model Assignment by Agent Role
 
-| Agent Type | Primary Model | Fallback | Est. Cost/Month |
-|-----------|---------------|----------|-----------------|
-| **Lead** | Claude Opus 4.6 | Claude Sonnet 4.6 | $8–25 |
-| **Strategy/Pro agents** | Claude Sonnet 4.6 | DeepSeek V3 | $3–10 |
-| **Worker agents** | DeepSeek V3 / Gemini Flash | Qwen 2.5 7B (local) | $0.50–3 |
-| **Heartbeat/Cron** | Qwen 2.5 7B (via Ollama) | None | $0 |
+Cost estimates below assume all Doc 03 optimizations are applied: lean context (< 5,000 tokens per agent per turn), memory compaction, delegation-based context resets, fail-fast escalation (1 retry max), heartbeat frequency tuning, and skill count management (3–5 per agent). See Doc 03 Sections 1–8 for the full methodology.
+
+**Benchmark:** Doc 03 Example A demonstrates a 19-agent squad running at $6.45/month with these optimizations applied — a 93% reduction from the $94.50/month naive deployment of the same squad.
+
+| Agent Type | Primary Model | Fallback | Est. Cost/Month (Optimized) | How Calculated |
+|-----------|---------------|----------|-----------------------------|----------------|
+| **Lead** | Claude Sonnet 4.6 | DeepSeek V3 | ~$2.25 | ~500k input / 50k output tokens on Sonnet (Doc 03 §5 Example A) |
+| **Strategy/Pro agents** | Claude Sonnet 4.6 | DeepSeek V3 | ~$1.00–1.50 each | Lower turn volume than Lead; strategy tasks are periodic, not continuous |
+| **Worker agents** | DeepSeek V3 / Gemini Flash | Qwen 2.5 7B (local) | ~$0.12–0.20 each | DeepSeek at $0.14/$0.28 per 1M tokens; lean context keeps per-turn cost at ~$0.0003 |
+| **Heartbeat/Cron** | Qwen 2.5 7B (via Ollama) | None | $0.00 | Local model, zero API cost |
+
+**Note on Opus:** Doc 03's validated $6.45/month example uses Sonnet for the Lead, not Opus. Using Opus as primary would increase the Lead's cost to ~$7–15/month (Opus is ~3.3x Sonnet input, 2x output). Opus should be reserved for escalation-only use: the Lead's fallback chain should be Sonnet → Opus, not Opus as default. This maintains the cost advantage while keeping Opus available for complex reasoning when needed.
 
 ### 9.3 OpenRouter Configuration (Doc 03, Section 2)
 

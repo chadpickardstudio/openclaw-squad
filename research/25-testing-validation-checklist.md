@@ -317,13 +317,17 @@ Verify the squad can handle a realistic workload without runaway costs.
 | 6.10 | No runaway loops | Monitor session count during load test | No unexpected session spawning |
 | 6.11 | Cost per task estimate | Calculate: total cost / number of tasks completed | Within budget tolerance for squad template |
 
-**Expected cost ranges (from Doc 03):**
+**Expected cost ranges (from Doc 03, with ALL optimizations applied):**
 
-| Squad | Monthly Budget (Idle) | Monthly Budget (Active) |
-|-------|----------------------|------------------------|
-| The Operator (4) | $6–15 | $15–30 |
-| The Department (8–10) | $15–40 | $40–80 |
-| The Marketing Machine (12–14) | $25–60 | $60–150 |
+All estimates assume Doc 03's full optimization stack: hybrid model routing (Lead on Sonnet, workers on DeepSeek/Gemini Flash, heartbeats on local Qwen), lean context (< 5,000 tokens per agent per turn), memory compaction, delegation-based context resets, fail-fast escalation, heartbeat frequency tuning, and skill count management. Benchmark: Doc 03 Example A validates a 19-agent squad at $6.45/month.
+
+| Squad | Monthly Cost (Optimized) | Naive Cost (No Optimization) | Savings |
+|-------|-------------------------|------------------------------|---------|
+| The Operator (4) | $3–8 | ~$20–30 | ~80% |
+| The Department (8–10) | $5–12 | ~$45–60 | ~85% |
+| The Marketing Machine (12–14) | $6–15 | ~$70–95 | ~90% |
+
+If actual costs exceed the "Optimized" column, investigate: likely causes are bloated workspace files, excessive heartbeat frequency, wrong model tier on a worker, or retry loops (see Doc 03 Section 8 anti-patterns).
 
 ---
 

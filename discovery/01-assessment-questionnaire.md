@@ -45,7 +45,7 @@ This is a **conversation guide**, not a form. The goal is a 15–20 minute conve
 | **Revenue range** | [ ] Pre-revenue [ ] Under £50k/year [ ] £50k–£200k [ ] £200k–£1M [ ] £1M+ |
 | **Do you have any contractors or freelancers?** | [ ] No [ ] Yes — doing what? ____________ |
 
-> **Router signal:** Solo founder + pre-revenue/under £200k → The Operator. Small team + £200k+ → The Department. Marketing-heavy + £200k+ → The Marketing Machine. See `02-router.md` Section 1.
+> **Router signal:** Squad selection is based on team size + pain point count + tool count, NOT budget. AI costs are £3–15/month regardless of squad size (Doc 03). Solo founder + few pain points → The Operator. Multiple pain areas → The Department. Marketing-heavy + 6+ pain areas → The Marketing Machine. See `02-router.md` Section 1.
 
 ---
 
@@ -307,7 +307,7 @@ For each function, ask: "Is this a problem area for you?" Mark the severity.
 
 | Field | Answer |
 |-------|--------|
-| **Monthly budget for AI squad** | [ ] Under £50 [ ] £50–100 [ ] £100–200 [ ] £200–500 [ ] £500+ [ ] "Whatever it takes" |
+| **Monthly budget for AI squad** | *Note to interviewer: AI API costs are £3–15/month after optimization (Doc 03). The client's budget here determines service tier and infrastructure, not squad size. Present the real costs confidently.* [ ] Under £25 [ ] £25–50 [ ] £50–100 [ ] £100+ [ ] "Whatever it takes" |
 | **Is this a hard ceiling or a guideline?** | [ ] Hard ceiling [ ] Flexible if results are good |
 
 ### 6.2 Success Criteria

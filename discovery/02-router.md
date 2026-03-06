@@ -27,37 +27,50 @@ This document takes the completed assessment (`discovery/01-assessment-questionn
 
 ## 1. Squad Template Selection
 
-### 1.1 Primary Decision Tree
+### 1.1 Cost Context (Read First)
 
-Start here. Use the assessment answers from Sections 1, 2, and 6.
+**Critical:** All squad cost estimates must reflect the full optimization stack from Doc 03 (API Cost Optimization). Without optimization, a 14-agent squad costs ~$95/month. With optimization, the same squad costs ~$6–15/month. The difference is purely architectural — hybrid model routing, lean context, local models for heartbeats, delegation-based context resets, and fail-fast escalation.
+
+**Optimized monthly costs (from Doc 03, validated in production):**
+- The Operator (4 agents): **$3–8/month**
+- The Department (8–10 agents): **$5–12/month**
+- The Marketing Machine (12–14 agents): **$6–15/month**
+
+These costs are the AI API costs only. Infrastructure (Hetzner CX22 VPS) adds ~£4/month. Chad Pickard Studio's service fees are separate.
+
+Budget should NOT be the primary factor in squad selection — even the largest squad costs under £15/month in API fees. Select the squad that matches the client's needs, not their budget fears.
+
+### 1.2 Primary Decision Tree
+
+Start here. Use the assessment answers from Sections 1 and 2. Budget (Section 6) is used for model routing decisions (Section 4), NOT for squad template selection.
 
 ```
 Assessment data:
   team_size = Section 1.2 → Team size
   tool_count = Section 3 → Count of all "Yes" tools
-  budget = Section 6.1 → Monthly budget
+  pain_count = Section 2.2 → Count of "Major pain" + "Critical" functions
   pain_focus = Section 2.2 → Where "Major pain" and "Critical" concentrate
 
 Decision tree:
 
-IF team_size = "Just me" AND tool_count < 5 AND budget < £100
-  → THE OPERATOR (4 agents)
+IF team_size = "Just me" AND pain_count <= 3 AND tool_count < 5
+  → THE OPERATOR (4 agents) — $3–8/month
 
-IF team_size = "Just me" AND tool_count >= 5 AND budget >= £100
-  → THE DEPARTMENT (8–10 agents)
+IF team_size = "Just me" AND (pain_count > 3 OR tool_count >= 5)
+  → THE DEPARTMENT (8–10 agents) — $5–12/month
 
-IF team_size = "2–5 people" AND budget < £100
-  → THE OPERATOR (4 agents)
+IF team_size = "2–5 people" AND pain_count <= 3
+  → THE OPERATOR (4 agents) — $3–8/month
 
-IF team_size = "2–5 people" AND budget >= £100
-  → THE DEPARTMENT (8–10 agents)
+IF team_size = "2–5 people" AND pain_count > 3
+  → THE DEPARTMENT (8–10 agents) — $5–12/month
 
-IF team_size = "6–15 people" OR budget >= £200
+IF team_size = "6–15 people"
   → THE DEPARTMENT (8–10 agents) or THE MARKETING MACHINE (12–14 agents)
-  → Use secondary signals (Section 1.2) to choose between them
+  → Use secondary signals (Section 1.3) to choose between them
 
-IF team_size = "15+" OR budget >= £300
-  → THE MARKETING MACHINE (12–14 agents)
+IF team_size = "15+" OR pain_count >= 6
+  → THE MARKETING MACHINE (12–14 agents) — $6–15/month
 ```
 
 ### 1.2 Secondary Signals (Override Primary When Needed)
@@ -240,19 +253,26 @@ If an agent is not activated (Section 2.4), do NOT generate skills for it. Skill
 
 ## 4. Model Routing Decision
 
-### 4.1 Budget-to-Model Mapping
+### 4.1 Standard Model Routing (Default for All Squads)
 
-Use Section 6.1 of the assessment (Monthly budget).
+Doc 03's validated production architecture uses a single optimized routing pattern that works for all squad sizes. The client's budget is NOT a factor in model selection — the optimized costs are so low ($3–15/month) that budget only matters for infrastructure and service fees.
 
-| Budget | Lead Model | Strategy Agents | Worker Agents | Heartbeat |
-|--------|-----------|----------------|---------------|-----------|
-| **Under £50/mo** | Claude Sonnet 4.6 | — | Qwen 2.5 7B (local) | Qwen 2.5 7B |
-| **£50–100/mo** | Claude Opus 4.6 | DeepSeek V3 | DeepSeek V3 | Qwen 2.5 7B |
-| **£100–200/mo** | Claude Opus 4.6 | Claude Sonnet 4.6 | DeepSeek V3 | Qwen 2.5 7B |
-| **£200–500/mo** | Claude Opus 4.6 | Claude Sonnet 4.6 | DeepSeek V3 / Gemini Flash | Qwen 2.5 7B |
-| **£500+/mo** | Claude Opus 4.6 | Claude Opus 4.6 | Claude Sonnet 4.6 | DeepSeek V3 |
+**Standard routing (apply to every squad):**
 
-**Ref:** Doc 03 (API Cost Optimization), Section 1. The key principle: start cheap, escalate only when needed. Every agent gets a fallback model one tier down.
+| Agent Type | Primary Model | Fallback | Monthly Cost |
+|-----------|---------------|----------|-------------|
+| **Lead** | Claude Sonnet 4.6 | DeepSeek V3 | ~$2.25 |
+| **Strategy agents** | Claude Sonnet 4.6 | DeepSeek V3 | ~$1.00–1.50 each |
+| **Worker agents** | DeepSeek V3 | Gemini 2.0 Flash | ~$0.12–0.20 each |
+| **Heartbeat/Cron** | Qwen 2.5 7B (local via Ollama) | None | $0.00 |
+
+**Escalation model (available to all agents via Lead):**
+- Claude Opus 4.6 — reserved for complex reasoning tasks where Sonnet fails or reports < 80% confidence
+- Never assigned as a primary model. Always used on-demand via the Lead's escalation logic (Doc 03, Section 4)
+
+**Why this works:** Doc 03 Example A proves 19 agents at $6.45/month with this exact pattern. The key insight is that intelligence is matched to task complexity — the Lead orchestrates on Sonnet, workers execute on budget models, and Opus is available when genuinely needed. No quality is lost because the final output is synthesised by the Lead (Doc 03, Sections 1 and 4).
+
+**Ref:** Doc 03 (API Cost Optimization), Sections 1–5. Full optimization stack: hybrid routing + lean context (< 5,000 tokens/agent/turn) + memory compaction + delegation-based context resets + fail-fast escalation (1 retry max) + heartbeat tuning + skill count management (3–5 per agent).
 
 ### 4.2 Heartbeat Frequency
 
