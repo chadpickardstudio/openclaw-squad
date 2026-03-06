@@ -1,0 +1,39 @@
+// openclaw.json agent entry for Compliance Officer
+{
+  "id": "compliance-officer",
+  "name": "Compliance Officer (Compliance & Risk)",
+  "workspace": "~/.openclaw/workspace-compliance-officer",
+  "agentDir": "~/.openclaw/agents/compliance-officer/agent",
+  "model": {
+    "primary": "anthropic/claude-sonnet-4-6",
+    "fallbacks": ["anthropic/claude-haiku-4-5"],
+  },
+  "tools": {
+    "profile": "messaging",
+    "allow": [
+      "read", "write", "edit",
+      "sessions_send",
+      "memory_search",
+      "browser",
+    ],
+    "deny": ["exec", "sudo", "fs_write"],
+  },
+  "sandbox": {
+    "mode": "all",
+    "workspaceAccess": "rw",
+    "networkAccess": "restricted",
+  },
+  "compaction": {
+    "mode": "safeguard",
+    "reserveTokensFloor": 15000,
+    "memoryFlush": {
+      "enabled": true,
+      "softThresholdTokens": 3000,
+    },
+  },
+  "heartbeat": {
+    "every": "4h",
+    "max_turns": 2,
+    "enabled": true,
+  },
+}
