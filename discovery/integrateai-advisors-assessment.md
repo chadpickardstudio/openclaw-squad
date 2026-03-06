@@ -1,4 +1,4 @@
-# Client Assessment — Chad Pickard Studio (Self-Deployment)
+# Client Assessment — IntegrateAI Advisors
 
 > **OpenClaw Squad · Discovery Phase — Completed**
 > Date: 2026-03-06
@@ -14,7 +14,7 @@
 | Field | Answer |
 |-------|--------|
 | **Your name** | Chad Pickard |
-| **Business name** | Chad Pickard Studio |
+| **Business name** | IntegrateAI Advisors |
 | **Website** | chadpickard.studio (live in a few days) |
 | **What does your business do, in one sentence?** | AI consultancy deploying autonomous agent teams (squads) for small businesses and solo founders who can't afford a full marketing/ops team |
 | **Industry** | Marketing agency / AI consultancy |
@@ -238,7 +238,7 @@ Based on this assessment:
 
 ### Recommended Squad Template: Custom / Full Department+
 
-This is not a standard client deployment. This is **dogfooding** — Chad Pickard Studio using OpenClaw to build itself. The squad needs to cover:
+This is not a standard client deployment. This is **dogfooding** — IntegrateAI Advisors using OpenClaw to build itself. The squad needs to cover:
 
 1. **Lead** — CEO agent, routes all work, manages the squad
 2. **Content Creator** — Blog, copy, long-form content
@@ -259,7 +259,7 @@ This is larger than a typical "Department" (Lead + 4-6) because the business lit
 
 - [ ] Feed this assessment into `discovery/02-router.md`
 - [ ] Generate deployment specification
-- [ ] Configure agent SOUL.md, IDENTITY.md, GOALS.md files with Chad Pickard Studio context
+- [ ] Configure agent SOUL.md, IDENTITY.md, GOALS.md files with IntegrateAI Advisors context
 - [ ] Set up tool stack (CRM, email platform, social scheduling, analytics)
 - [ ] Deploy squad with approval-first oversight model
 - [ ] Activate all social channels
