@@ -1,0 +1,38 @@
+// openclaw.json agent entry for Bookkeeper
+{
+  "id": "bookkeeper",
+  "name": "Bookkeeper (CFO)",
+  "workspace": "~/.openclaw/workspace-bookkeeper",
+  "agentDir": "~/.openclaw/agents/bookkeeper/agent",
+  "model": {
+    "primary": "anthropic/claude-sonnet-4-6",
+    "fallbacks": ["anthropic/claude-haiku-4-5"],
+  },
+  "tools": {
+    "profile": "messaging",
+    "allow": [
+      "read", "write", "edit",
+      "sessions_send",
+      "memory_search",
+    ],
+    "deny": ["exec", "sudo", "fs_write"],
+  },
+  "sandbox": {
+    "mode": "all",
+    "workspaceAccess": "rw",
+    "networkAccess": "restricted",
+  },
+  "compaction": {
+    "mode": "safeguard",
+    "reserveTokensFloor": 15000,
+    "memoryFlush": {
+      "enabled": true,
+      "softThresholdTokens": 3000,
+    },
+  },
+  "heartbeat": {
+    "every": "2h",
+    "max_turns": 2,
+    "enabled": true,
+  },
+}

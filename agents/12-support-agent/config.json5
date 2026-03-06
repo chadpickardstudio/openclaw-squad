@@ -1,0 +1,39 @@
+// openclaw.json agent entry for Support Agent
+{
+  "id": "support-agent",
+  "name": "Support Agent (Customer Support)",
+  "workspace": "~/.openclaw/workspace-support-agent",
+  "agentDir": "~/.openclaw/agents/support-agent/agent",
+  "model": {
+    // Haiku for speed + cost on high-volume support
+    "primary": "anthropic/claude-haiku-4-5",
+    "fallbacks": ["anthropic/claude-sonnet-4-6"],
+  },
+  "tools": {
+    "profile": "messaging",
+    "allow": [
+      "read", "write", "edit",
+      "sessions_send",
+      "memory_search",
+    ],
+    "deny": ["exec", "sudo", "fs_write"],
+  },
+  "sandbox": {
+    "mode": "all",
+    "workspaceAccess": "rw",
+    "networkAccess": "restricted",
+  },
+  "compaction": {
+    "mode": "safeguard",
+    "reserveTokensFloor": 10000,
+    "memoryFlush": {
+      "enabled": true,
+      "softThresholdTokens": 2000,
+    },
+  },
+  "heartbeat": {
+    "every": "30m",
+    "max_turns": 2,
+    "enabled": true,
+  },
+}
