@@ -44,17 +44,10 @@ try {
 }
 
 const NOTION_API_KEY = process.env.NOTION_API_KEY;
-const NOTION_PARENT_PAGE = process.env.NOTION_PARENT_PAGE;
+let NOTION_PARENT_PAGE = process.env.NOTION_PARENT_PAGE;
 
 if (!NOTION_API_KEY) {
   console.error("✗ NOTION_API_KEY is required. Set it in .env or as an env var.");
-  process.exit(1);
-}
-if (!NOTION_PARENT_PAGE) {
-  console.error("✗ NOTION_PARENT_PAGE is required.");
-  console.error("  1. Open the Notion page where you want these databases created");
-  console.error("  2. Copy the page ID from the URL (32-char hex string)");
-  console.error("  3. Run again with: NOTION_PARENT_PAGE=<id> node scripts/setup-notion.mjs");
   process.exit(1);
 }
 
@@ -68,17 +61,65 @@ const HEADERS = {
 // Helpers
 // ---------------------------------------------------------------------------
 
-async function notionPost(endpoint, body) {
-  const res = await fetch(`https://api.notion.com/v1${endpoint}`, {
-    method: "POST",
-    headers: HEADERS,
-    body: JSON.stringify(body),
-  });
+async function notionRequest(method, endpoint, body) {
+  const opts = { method, headers: HEADERS };
+  if (body) opts.body = JSON.stringify(body);
+  const res = await fetch(`https://api.notion.com/v1${endpoint}`, opts);
   if (!res.ok) {
     const err = await res.text();
     throw new Error(`Notion API ${res.status}: ${err}`);
   }
   return res.json();
+}
+
+async function findOrCreateParentPage() {
+  // Search for an existing "IntegrateAI HQ" page
+  const search = await notionRequest("POST", "/search", {
+    query: "IntegrateAI HQ",
+    filter: { value: "page", property: "object" },
+    page_size: 5,
+  });
+
+  const existing = search.results.find(
+    (p) => p.object === "page" && !p.archived
+  );
+
+  if (existing) {
+    console.log(`  Found existing parent page: ${existing.url}`);
+    return existing.id;
+  }
+
+  // Create a new top-level page (the integration must have workspace-level access)
+  // Try searching for ANY page we have access to and use it as context
+  const anyPage = await notionRequest("POST", "/search", {
+    filter: { value: "page", property: "object" },
+    page_size: 1,
+  });
+
+  if (anyPage.results.length > 0) {
+    // Create as a child of the first accessible page
+    const parent = anyPage.results[0];
+    const page = await notionRequest("POST", "/pages", {
+      parent: { page_id: parent.id },
+      icon: { type: "emoji", emoji: "🏢" },
+      properties: {
+        title: { title: richText("IntegrateAI HQ") },
+      },
+    });
+    console.log(`  Created parent page: ${page.url}`);
+    return page.id;
+  }
+
+  // No pages found — user needs to share a page with the integration
+  console.error("✗ No pages accessible. Share a page with your Notion integration first.");
+  console.error("  1. Open any Notion page");
+  console.error("  2. Click ··· → Connections → Add your integration");
+  console.error("  3. Run this script again");
+  process.exit(1);
+}
+
+async function notionPost(endpoint, body) {
+  return notionRequest("POST", endpoint, body);
 }
 
 function richText(text) {
@@ -444,6 +485,11 @@ async function main() {
   console.log("━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━");
   console.log("  IntegrateAI Advisors — Notion Workspace Setup");
   console.log("━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━");
+
+  if (!NOTION_PARENT_PAGE) {
+    console.log("\n→ No NOTION_PARENT_PAGE set, auto-discovering...");
+    NOTION_PARENT_PAGE = await findOrCreateParentPage();
+  }
 
   const crmId = await createCRM();
   const checklistId = await createLaunchChecklist();
