@@ -6,6 +6,8 @@ on:
 jobs:
   setup:
     runs-on: ubuntu-latest
+    permissions:
+      issues: write
     steps:
       - uses: actions/checkout@v4
 
@@ -18,16 +20,16 @@ jobs:
         env:
           NOTION_API_KEY: ${{ secrets.NOTION_API_KEY }}
         run: |
-          OUTPUT=$(node scripts/setup-notion.mjs 2>&1)
-          echo "$OUTPUT"
-          echo "output<<EOF" >> $GITHUB_OUTPUT
-          echo "$OUTPUT" >> $GITHUB_OUTPUT
-          echo "EOF" >> $GITHUB_OUTPUT
+          node scripts/setup-notion.mjs 2>&1 | tee /tmp/notion-output.txt
+          echo "output<<ENDOFOUTPUT" >> $GITHUB_OUTPUT
+          cat /tmp/notion-output.txt >> $GITHUB_OUTPUT
+          echo "ENDOFOUTPUT" >> $GITHUB_OUTPUT
 
-      - name: Post output as commit status
+      - name: Post output as issue
         if: always()
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
-          # Create an issue comment with the output so we can read it via API
-          gh issue create --title "Notion Setup Output (Run #${{ github.run_number }})" --body "${{ steps.notion.outputs.output }}" --label "automation" || true
+          gh issue create \
+            --title "Notion Setup Output (Run #${{ github.run_number }})" \
+            --body "$(cat /tmp/notion-output.txt)" || echo "Failed to create issue"
