@@ -10,7 +10,7 @@
 1. **Add an entry** whenever you make a decision, complete a task, hit a blocker, or have a question
 2. **Tag the person** who needs to see it: `@chad` or `@paul`
 3. **Check this log** at the start of each work session to catch up
-4. **Notion Activity Log** mirrors this in the IntegrateAI HQ workspace (with notifications enabled)
+4. **Discord** is the real-time hub - this log is the permanent record for major milestones
 
 ---
 
@@ -18,11 +18,11 @@
 
 ### 2026-03-07
 
-**[Chad]** Set up team activity log and comms strategy `@paul`
-- Created this ACTIVITY-LOG.md for async updates between us
-- Notion Activity Log database to be added to IntegrateAI HQ workspace
-- Discord planned for real-time chat once we're closer to launch
-- Paul: check this file and Notion for updates. Add your own entries when you do work.
+**[Chad]** Set up team comms: Discord + Activity Log `@paul`
+- Created this ACTIVITY-LOG.md as the permanent record of major updates
+- Discord server "IntegrateAI HQ" is the primary comms hub (free, unlimited members)
+- Dropped Notion for shared comms (free plan = 1 member only)
+- Paul: join Discord, check this log for the full history of what's been built
 
 **[Chad]** Completed Notion workspace setup and automation `@paul`
 - IntegrateAI HQ workspace organized with databases for tasks, content, and operations

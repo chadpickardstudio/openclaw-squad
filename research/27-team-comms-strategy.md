@@ -2,37 +2,40 @@
 
 ## Summary
 
-Communication plan between Chad and Paul to keep both founders aligned as IntegrateAI moves toward launch.
+Communication plan between Chad and Paul to keep both founders aligned as IntegrateAI moves toward launch. Discord is the primary hub (free, unlimited members). Notion stays as a solo workspace for content/ops, not for shared comms.
 
-## Phase 1: Now (Async Updates)
+> **Note**: Notion free plan only supports 1 member. Using Discord instead for all shared communication.
 
-### Notion Activity Log
-- **Where**: IntegrateAI HQ workspace > Activity Log database
-- **What**: Structured entries with date, person, action, status, and tags
-- **Notifications**: Both founders subscribe to the database so Notion pushes alerts on new entries
-- **Use for**: Decisions made, tasks completed, blockers, questions for the other person
+## Phase 1: Now (Discord + GitHub)
+
+### Discord Server (Primary Comms Hub)
+- **Cost**: Free (unlimited members, channels, and integrations)
+- **Server name**: IntegrateAI HQ
+- **Channels**:
+  - `#general` - Day-to-day coordination
+  - `#founder-chat` - Private channel for Chad + Paul (important decisions)
+  - `#activity-feed` - Webhook-connected to GitHub for automatic updates on pushes, PRs, issues
+  - `#decisions` - Important decisions that need agreement from both founders
+  - `#blockers` - Flag issues immediately so the other person sees them
+  - `#ideas` - Low-pressure space for brainstorming
+- **Webhooks**: Connect GitHub repo to `#activity-feed` so all code activity auto-posts
+- **Notifications**: Both founders enable notifications for `#founder-chat`, `#decisions`, and `#blockers`
 
 ### GitHub Activity Log
 - **Where**: `/ACTIVITY-LOG.md` in the openclaw-squad repo
-- **What**: Markdown changelog mirroring Notion for devs who live in the repo
-- **Use for**: Same as Notion, but accessible without leaving the codebase
+- **What**: Structured changelog for major milestones and decisions
+- **Use for**: Permanent record of what was done and when (Discord messages scroll away, this doesn't)
 
 ### GitHub Notifications
 - **Already active**: Both have access to the repo
 - **Use for**: PR reviews, issue discussions, code-level decisions
 
-## Phase 2: Pre-Launch (Real-Time Chat)
+## Phase 2: Post-Launch (Scale Communication)
 
-### Discord Server
-- **When**: Set up as part of launch checklist (already planned)
-- **Channels to create**:
-  - `#founder-chat` - Private channel for Chad + Paul
-  - `#activity-feed` - Webhook-connected to GitHub for automatic updates
-  - `#decisions` - Important decisions that need agreement from both
-  - `#general` - Day-to-day coordination
-- **Webhooks**: Connect GitHub repo events to `#activity-feed` so pushes, PRs, and issues auto-post
-
-## Phase 3: Post-Launch (Scale Communication)
+### Discord Additions
+- `#customer-feedback` - Relay customer insights
+- `#metrics` - Bot-posted weekly metrics summaries
+- `#agent-status` - Agent squad performance updates
 
 ### Automated Digests
 - Weekly summary of all activity (can be generated from ACTIVITY-LOG.md)
@@ -41,20 +44,18 @@ Communication plan between Chad and Paul to keep both founders aligned as Integr
 
 ## Rules of Engagement
 
-1. **Response time**: Check the log at least once per work session
-2. **Decisions**: Tag the other person and wait for acknowledgment before proceeding on anything that affects budget, public-facing content, or architecture
-3. **Blockers**: Flag immediately - don't wait for the next check-in
+1. **Response time**: Check Discord at least once per work session
+2. **Decisions**: Post in `#decisions` and wait for the other person to react/respond before proceeding on anything that affects budget, public-facing content, or architecture
+3. **Blockers**: Post in `#blockers` immediately - don't wait for the next check-in
 4. **Updates**: No update is too small. "Started working on X" is useful context
+5. **Activity Log**: Update ACTIVITY-LOG.md for major milestones (it's the permanent record)
 
-## Notion Activity Log Database Schema
+## Discord Setup Checklist
 
-| Property | Type | Purpose |
-|----------|------|---------|
-| Title | Title | Brief description of the activity |
-| Date | Date | When it happened |
-| Person | Select (Chad/Paul) | Who did it |
-| Type | Select | Update / Decision / Blocker / Question |
-| Status | Select | Done / In Progress / Needs Response |
-| Notify | Select (Chad/Paul/Both) | Who needs to see this |
-| Details | Rich text | Full context and notes |
-| Related | URL | Link to PR, Notion page, or doc |
+- [ ] Create Discord server "IntegrateAI HQ"
+- [ ] Create channels: `#general`, `#founder-chat`, `#activity-feed`, `#decisions`, `#blockers`, `#ideas`
+- [ ] Set `#founder-chat` as private (Chad + Paul only)
+- [ ] Add GitHub webhook to `#activity-feed` (Settings > Integrations > Webhooks)
+- [ ] Invite Paul
+- [ ] Both enable notifications for `#founder-chat`, `#decisions`, `#blockers`
+- [ ] Pin the rules of engagement in `#general`
