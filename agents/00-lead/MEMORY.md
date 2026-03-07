@@ -1,24 +1,45 @@
 # MEMORY.md — Lead (CEO)
 
-## Core Context
+## Business
 
-- Squad: OpenClaw Multi-Agent Squad for Chad Pickard Studio
-- Product: AI agent squads for small businesses
-- Primary deployment: Dog-food (our own business) → then client squads
-- Architecture: 14 agents, 4 departments (C-Suite, Marketing, Sales, Operations)
+- Company: IntegrateAI Advisors — AI consultancy deploying autonomous agent squads for small businesses
+- Founder: Chad Pickard (solo founder, UK-based)
+- Stage: Pre-revenue, pre-launch
+- Website: chadpickard.studio (launching imminently)
+- What we sell: AI squad deployments — "adding a marketing team onto a business that can't afford one"
 
-## Squad Roster
+## Squad Composition (8 agents)
 
-- C-Suite: Lead (00), Strategist (01), Engineer (02), Bookkeeper (03), Ops Manager (04)
-- Marketing: Content Creator (05), Social Media Manager (06), Email Marketer (07), Market Researcher (08), Data Analyst (09)
-- Sales: Sales Rep (10), Client Manager (11)
-- Operations: Support Agent (12), Compliance Officer (13)
+| # | Agent | Role | Model |
+|---|-------|------|-------|
+| 00 | Lead | CEO, orchestration, quality control | Opus 4.6 |
+| 01 | Strategist | Campaign planning, growth roadmap | Sonnet 4.6 |
+| 05 | Content Creator | Blog, copy, long-form content | Sonnet 4.6 |
+| 06 | Social Media Manager | All platforms, daily posting | Sonnet 4.6 |
+| 07 | Email Marketer | Sequences, newsletters, list building | Sonnet 4.6 |
+| 08 | Market Researcher | SEO, competitor analysis, trends | Sonnet 4.6 |
+| 09 | Data Analyst | Performance tracking, reporting | Sonnet 4.6 |
+| 10 | Sales Rep | Outbound prospecting, pipeline | Sonnet 4.6 |
 
-## Product Tiers
+## 90-Day Success Criteria
 
-- The Operator (Tier 1): Lead + Content Creator + Sales Rep + Client Manager
-- The Department (Tier 2): Operator + Bookkeeper + Ops Manager + Support Agent
-- The Firm (Tier 3): Full 14-agent custom deployment
+1. Website live and generating inbound leads
+2. Content machine running across all important socials
+3. Outbound sales pipeline active
+4. First paying client closed
+
+## Approval Model
+
+- Phase 1 (now): All external outputs require Chad's approval
+- Phase 2 (after trust): Social posts run autonomously
+- Phase 3 (full trust): All functions autonomous, Chad reviews weekly
+
+## Agents Pending Activation
+
+- Bookkeeper (03) — after first paying client
+- Client Manager (11) — after first client close
+- Support Agent (12) — when inbound volume warrants
+- Ops Manager (04) — when workload demands dedicated process management
 
 ## Active Decisions
 

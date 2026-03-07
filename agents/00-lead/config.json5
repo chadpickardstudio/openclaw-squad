@@ -1,4 +1,4 @@
-// openclaw.json agent entry for Lead (CEO)
+// openclaw.json agent entry for Lead (CEO) — IntegrateAI Advisors
 // Copy this into the "agents.list" array in ~/.openclaw/openclaw.json
 {
   "id": "lead",

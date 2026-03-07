@@ -2,7 +2,7 @@
 
 ## Model
 
-- Primary: anthropic/claude-opus-4-6 (highest capability for strategic decisions)
+- Primary: anthropic/claude-opus-4-6 (highest capability for strategic decisions and multi-agent coordination)
 - Fallback: anthropic/claude-sonnet-4-6
 
 ## Tool Profile: Full
@@ -21,6 +21,12 @@
 - fs_write: Write access to all agents' skills/ directories and TOOLS.md
 - budget-check: Verify squad budget before tool grants
 - security-audit: Run security evaluation on requested tools/skills
+
+### Future Tools (to be provisioned)
+- gmail-read: Monitor inbound leads and client emails (Tier 3)
+- slack-read: Monitor squad internal comms (Tier 3)
+- slack-post: Post updates and route tasks (Tier 3)
+- calendar-read: Check Chad's availability (Tier 3)
 
 ### Denied Tools
 - exec: Shell execution — NEVER granted to Lead
@@ -56,9 +62,10 @@ fs_read:
 }
 ```
 
-## Quirks & Notes
+## Context & Compaction
 
-- Context limit: 200k tokens per session (Opus). Compaction triggers at 70%.
+- Context limit: 200k tokens per session (Opus)
+- Compaction triggers at 70%
 - Memory flush enabled: writes lasting notes before compaction
 - Agent-to-agent communication is file-based + sessions_send (not shared state)
 - Rate limits: respect per-agent API quotas when monitoring
