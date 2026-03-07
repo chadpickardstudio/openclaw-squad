@@ -1,0 +1,174 @@
+name: Discord Notifications
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    types: [opened, closed, merged]
+  issues:
+    types: [opened, closed]
+  workflow_run:
+    workflows: ["*"]
+    types: [completed]
+
+jobs:
+  # Post commits to #activity-log
+  notify-push:
+    if: github.event_name == 'push'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Post commit to Discord activity-log
+        env:
+          WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_ACTIVITY_LOG }}
+        run: |
+          COMMIT_MSG=$(echo '${{ toJSON(github.event.head_commit.message) }}' | head -c 200)
+          AUTHOR="${{ github.event.head_commit.author.name }}"
+          COMMIT_URL="${{ github.event.head_commit.url }}"
+          BRANCH="${{ github.ref_name }}"
+          REPO="${{ github.repository }}"
+
+          curl -s -H "Content-Type: application/json" \
+            -d "{
+              \"username\": \"GitHub Activity\",
+              \"embeds\": [{
+                \"title\": \"🔨 New commit on \`${BRANCH}\`\",
+                \"description\": ${COMMIT_MSG},
+                \"url\": \"${COMMIT_URL}\",
+                \"color\": 3066993,
+                \"fields\": [
+                  {\"name\": \"Author\", \"value\": \"${AUTHOR}\", \"inline\": true},
+                  {\"name\": \"Repo\", \"value\": \"${REPO}\", \"inline\": true}
+                ],
+                \"timestamp\": \"$(date -u +%Y-%m-%dT%H:%M:%SZ)\"
+              }]
+            }" \
+            "$WEBHOOK_URL"
+
+  # Post PRs to #activity-log
+  notify-pr:
+    if: github.event_name == 'pull_request'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Post PR update to Discord activity-log
+        env:
+          WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_ACTIVITY_LOG }}
+        run: |
+          ACTION="${{ github.event.action }}"
+          PR_TITLE=$(echo '${{ toJSON(github.event.pull_request.title) }}' | head -c 200)
+          PR_URL="${{ github.event.pull_request.html_url }}"
+          AUTHOR="${{ github.event.pull_request.user.login }}"
+          MERGED="${{ github.event.pull_request.merged }}"
+
+          if [ "$ACTION" = "closed" ] && [ "$MERGED" = "true" ]; then
+            EMOJI="✅"
+            STATUS="merged"
+            COLOR=10181046
+          elif [ "$ACTION" = "closed" ]; then
+            EMOJI="❌"
+            STATUS="closed"
+            COLOR=15158332
+          else
+            EMOJI="📬"
+            STATUS="opened"
+            COLOR=3447003
+          fi
+
+          curl -s -H "Content-Type: application/json" \
+            -d "{
+              \"username\": \"GitHub Activity\",
+              \"embeds\": [{
+                \"title\": \"${EMOJI} PR ${STATUS}: ${PR_TITLE}\",
+                \"url\": \"${PR_URL}\",
+                \"color\": ${COLOR},
+                \"fields\": [
+                  {\"name\": \"Author\", \"value\": \"${AUTHOR}\", \"inline\": true}
+                ],
+                \"timestamp\": \"$(date -u +%Y-%m-%dT%H:%M:%SZ)\"
+              }]
+            }" \
+            "$WEBHOOK_URL"
+
+  # Post issues to #announcements
+  notify-issue:
+    if: github.event_name == 'issues'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Post issue to Discord announcements
+        env:
+          WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_ANNOUNCEMENTS }}
+        run: |
+          ACTION="${{ github.event.action }}"
+          ISSUE_TITLE=$(echo '${{ toJSON(github.event.issue.title) }}' | head -c 200)
+          ISSUE_URL="${{ github.event.issue.html_url }}"
+          AUTHOR="${{ github.event.issue.user.login }}"
+
+          if [ "$ACTION" = "opened" ]; then
+            EMOJI="📌"
+            COLOR=16776960
+          else
+            EMOJI="✅"
+            COLOR=3066993
+          fi
+
+          curl -s -H "Content-Type: application/json" \
+            -d "{
+              \"username\": \"GitHub Announcements\",
+              \"embeds\": [{
+                \"title\": \"${EMOJI} Issue ${ACTION}: ${ISSUE_TITLE}\",
+                \"url\": \"${ISSUE_URL}\",
+                \"color\": ${COLOR},
+                \"fields\": [
+                  {\"name\": \"By\", \"value\": \"${AUTHOR}\", \"inline\": true}
+                ],
+                \"timestamp\": \"$(date -u +%Y-%m-%dT%H:%M:%SZ)\"
+              }]
+            }" \
+            "$WEBHOOK_URL"
+
+  # Post CI/CD results to #agent-status
+  notify-workflow:
+    if: github.event_name == 'workflow_run'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Post workflow result to Discord agent-status
+        env:
+          WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_AGENT_STATUS }}
+        run: |
+          WORKFLOW_NAME="${{ github.event.workflow_run.name }}"
+          CONCLUSION="${{ github.event.workflow_run.conclusion }}"
+          RUN_URL="${{ github.event.workflow_run.html_url }}"
+          BRANCH="${{ github.event.workflow_run.head_branch }}"
+          ACTOR="${{ github.event.workflow_run.actor.login }}"
+
+          # Skip notifying about ourselves to avoid loops
+          if [ "$WORKFLOW_NAME" = "Discord Notifications" ]; then
+            echo "Skipping self-notification"
+            exit 0
+          fi
+
+          if [ "$CONCLUSION" = "success" ]; then
+            EMOJI="✅"
+            COLOR=3066993
+          elif [ "$CONCLUSION" = "failure" ]; then
+            EMOJI="🔴"
+            COLOR=15158332
+          else
+            EMOJI="⚠️"
+            COLOR=16776960
+          fi
+
+          curl -s -H "Content-Type: application/json" \
+            -d "{
+              \"username\": \"CI/CD Status\",
+              \"embeds\": [{
+                \"title\": \"${EMOJI} ${WORKFLOW_NAME} — ${CONCLUSION}\",
+                \"url\": \"${RUN_URL}\",
+                \"color\": ${COLOR},
+                \"fields\": [
+                  {\"name\": \"Branch\", \"value\": \"\`${BRANCH}\`\", \"inline\": true},
+                  {\"name\": \"Triggered by\", \"value\": \"${ACTOR}\", \"inline\": true}
+                ],
+                \"timestamp\": \"$(date -u +%Y-%m-%dT%H:%M:%SZ)\"
+              }]
+            }" \
+            "$WEBHOOK_URL"
