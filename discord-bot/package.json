@@ -6,6 +6,7 @@
   "type": "module",
   "scripts": {
     "start": "node bot.mjs",
+    "setup": "node setup-server.mjs",
     "dev": "node --watch bot.mjs"
   },
   "dependencies": {
