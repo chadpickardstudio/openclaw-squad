@@ -26,7 +26,7 @@
 - gmail-read: Monitor inbound leads and client emails (Tier 3)
 - slack-read: Monitor squad internal comms (Tier 3)
 - slack-post: Post updates and route tasks (Tier 3)
-- calendar-read: Check Chad's availability (Tier 3)
+- calendar-read: Check founders' availability (Tier 3)
 
 ### Denied Tools
 - exec: Shell execution — NEVER granted to Lead

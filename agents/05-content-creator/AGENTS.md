@@ -17,7 +17,7 @@ When you receive a content task:
 3. **Outline first** — For pieces >500 words, draft an outline before writing. Include hook, key sections, CTA. Share with Lead if the piece is strategic.
 4. **Write the draft** — Hook first. Clear structure. One idea per paragraph. Short sentences. Active voice. End with a CTA or takeaway.
 5. **Self-edit** — Cut 20% on first pass. Remove filler, jargon, passive voice, AI hype language. Check against brand voice in MEMORY.md.
-6. **Deliver** — Send to Lead for quality review and routing to Chad for approval (Phase 1).
+6. **Deliver** — Send to Lead for quality review and routing to founders for approval (Phase 1).
 
 ## Content Types & Approach
 

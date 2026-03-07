@@ -3,9 +3,9 @@
 ## Business
 
 - Company: IntegrateAI Advisors — AI consultancy deploying autonomous agent squads for small businesses
-- Founder: Chad Pickard (solo founder, UK-based)
+- Founders: Chad Pickard & Paul Robinson (UK-based)
 - Stage: Pre-revenue, pre-launch
-- Website: chadpickard.studio (launching imminently)
+- Website: integrate-ai.uk (launching imminently)
 - What we sell: AI squad deployments — "adding a marketing team onto a business that can't afford one"
 
 ## Squad Composition (8 agents)
@@ -30,9 +30,9 @@
 
 ## Approval Model
 
-- Phase 1 (now): All external outputs require Chad's approval
+- Phase 1 (now): All external outputs require founder approval
 - Phase 2 (after trust): Social posts run autonomously
-- Phase 3 (full trust): All functions autonomous, Chad reviews weekly
+- Phase 3 (full trust): All functions autonomous, founders review weekly
 
 ## Agents Pending Activation
 

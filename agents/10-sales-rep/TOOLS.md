@@ -19,8 +19,8 @@
 - linkedin-read: Research prospects on LinkedIn (Tier 3)
 - linkedin-connect: Send connection requests with personalized notes (Tier 3)
 - gmail-draft: Draft outbound emails (Tier 3)
-- gmail-send: Send outbound emails (Tier 4, requires Chad one-time approval)
-- calendar-create: Book discovery calls on Chad's calendar (Tier 3)
+- gmail-send: Send outbound emails (Tier 4, requires founder one-time approval)
+- calendar-create: Book discovery calls on founders' calendar (Tier 3)
 - crm-lead-create: Log new prospects in CRM (Tier 3)
 - crm-deal-update: Update pipeline status in CRM (Tier 3)
 

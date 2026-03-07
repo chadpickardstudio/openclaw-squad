@@ -1,14 +1,14 @@
 # USER.md — IntegrateAI Advisors
 
-## Profile
+## Founders
 
-- Name: Chad Pickard
-- Role: Founder & Principal
-- Business: IntegrateAI Advisors — AI consultancy deploying autonomous agent squads for small businesses and solo founders
+- **Chad Pickard** — Co-Founder
+- **Paul Robinson** — Co-Founder
+- Business: IntegrateAI Advisors — AI consultancy deploying autonomous agent squads for small businesses
 - Industry: AI consultancy / marketing services
-- Website: chadpickard.studio
+- Website: integrate-ai.uk
 - Location: United Kingdom (GMT/BST)
-- Team: Solo founder — the AI squad IS the team
+- Team: Two founders — the AI squad IS the operational team
 
 ## Communication Preferences
 
@@ -24,7 +24,7 @@
 - Primary goal: Full operational squad from day one. Website generating leads, content machine across all socials, active outbound pipeline, first paying client within 90 days
 - What we sell: AI squad deployments for small businesses — "adding a social/marketing team onto a business that can't afford one"
 - Highest margin: The deployment itself — low API costs (~$9/month), high perceived value
-- Current priority: Dog-food the squad on our own business, then package and sell blueprints
+- Current priority: Dog-food the squad on our own business, then package and sell deployments
 
 ## Target Audience
 
@@ -38,14 +38,14 @@
 
 - Confident, direct, no-BS, premium but approachable, slightly technical
 - Never sound like: corporate fluff, over-promising SaaS marketing, generic AI hype
-- Reference material: chadpickard.studio website copy, MISSION.md
+- Reference material: integrate-ai.uk website copy, MISSION.md
 
 ## Preferences
 
-- Prefers bold recommendations over safe hedging
-- Values speed and output over process and polish
-- Wants measurable results, not theoretical frameworks
-- Doesn't want phased rollouts or single-agent prioritisation — everything operational simultaneously
+- Prefer bold recommendations over safe hedging
+- Value speed and output over process and polish
+- Want measurable results, not theoretical frameworks
+- Don't want phased rollouts or single-agent prioritisation — everything operational simultaneously
 - Success = leads generated, content published, pipeline active, first client closed
 
 ## What NOT to Do
@@ -54,11 +54,11 @@
 - Don't ask for permission on safe operations — just do it
 - Don't present options when there's a clear best choice — recommend it
 - Don't use corporate speak or AI hype language
-- Don't suggest "phased approaches" — Chad wants everything running now
+- Don't suggest "phased approaches" — founders want everything running now
 - Don't treat this as a demo — this is a real business being built
 
 ## Approval Model
 
-- Phase 1 (current): All external outputs require Chad's approval before going live
+- Phase 1 (current): All external outputs require founder approval before going live
 - Phase 2 (after quality trust established): Social posts and routine content run autonomously
-- Phase 3 (full trust): All functions run autonomously, Chad reviews weekly
+- Phase 3 (full trust): All functions run autonomously, founders review weekly

@@ -3,12 +3,12 @@
 ## Business Context
 
 - Company: IntegrateAI Advisors — AI consultancy deploying autonomous agent squads
-- Founder: Chad Pickard (solo founder, UK-based)
+- Founders: Chad Pickard & Paul Robinson (UK-based)
 - Email platform: TBD (Beehiiv or MailerLite recommended — awaiting selection)
 
 ## Email Voice
 
-- Tone: Personal, direct, no-BS — reads like it came from Chad, not a tool
+- Tone: Personal, direct, no-BS — reads like it came from a founder, not a tool
 - Value-first: every email teaches something or solves a problem
 - Never salesy or spammy
 - Short paragraphs, active voice, one idea per email

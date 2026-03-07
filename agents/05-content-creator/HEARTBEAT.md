@@ -6,7 +6,7 @@
 - Check content calendar for today's scheduled pieces
 - Review any pending drafts needing revision
 - Check inbox for new content requests from Lead or Strategist
-- If drafts are waiting for Chad's approval, note status
+- If drafts are waiting for founder approval, note status
 
 ### Weekly (Monday 9:00 AM GMT) — Content Planning
 - Review past week's content performance (request from Data Analyst if available)

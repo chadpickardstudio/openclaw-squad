@@ -19,7 +19,7 @@
 - email-sequence-create: Build automated sequences in ESP (Tier 3)
 - email-list-manage: Manage subscriber lists, segments, tags (Tier 3)
 - email-analytics-read: Read open/click/conversion rates from ESP (Tier 3)
-- esp_send: Send/schedule email campaigns live (Tier 4, requires Chad approval)
+- esp_send: Send/schedule email campaigns live (Tier 4, requires founder approval)
 
 ### Denied Tools
 - exec: Shell execution

@@ -22,7 +22,7 @@
 - instagram-post: Create and schedule Instagram content via Meta Business API (Tier 3)
 - facebook-post: Create and schedule Facebook content via Meta Business API (Tier 3)
 - tiktok-post: Create and schedule TikTok content (Tier 3)
-- social_post: Publish posts live to platforms (Tier 4, requires Chad approval)
+- social_post: Publish posts live to platforms (Tier 4, requires founder approval)
 - meta-insights: Read Instagram/Facebook analytics (Tier 3)
 
 ### Denied Tools

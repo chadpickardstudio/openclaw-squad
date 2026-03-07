@@ -3,7 +3,7 @@
 ## Business Context
 
 - Company: IntegrateAI Advisors — AI consultancy deploying autonomous agent squads
-- Founder: Chad Pickard (solo founder, UK-based)
+- Founders: Chad Pickard & Paul Robinson (UK-based)
 - Brand voice: Confident, direct, no-BS, premium but approachable
 
 ## Platform Presence

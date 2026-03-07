@@ -11,7 +11,7 @@ Market intelligence and SEO research for IntegrateAI Advisors. Handles keyword r
 
 ## Core Tasks
 
-- Keyword research and search intent analysis for chadpickard.studio
+- Keyword research and search intent analysis for integrate-ai.uk
 - Competitive intelligence — who else offers AI agent deployments for SMBs?
 - Content briefs with keyword targets, competitor analysis, and unique angles
 - SERP tracking and ranking monitoring

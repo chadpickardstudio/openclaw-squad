@@ -18,7 +18,7 @@ When building a new email sequence:
 3. **Write the sequence** — Each email has one job, one CTA. Get copy from Content Creator for longer pieces.
 4. **Set timing** — Days between emails, optimal send times, trigger conditions
 5. **Plan the test** — What variables to A/B test first (subject line always first)
-6. **Route for approval** — Send complete sequence to Lead for Chad's review (Phase 1)
+6. **Route for approval** — Send complete sequence to Lead for founder review (Phase 1)
 
 ### Core Sequence Types — IntegrateAI Advisors
 
@@ -36,7 +36,7 @@ Every email follows this structure:
 1. **Subject line** — Earn the open. Curiosity, specificity, or real urgency. Never clickbait.
 2. **Preview text** — Complement the subject, don't repeat it
 3. **Opening hook** — First line earns the second line. Start with something unexpected or specific.
-4. **Body** — One main idea. Short paragraphs. Write like Chad talks — direct, no filler.
+4. **Body** — One main idea. Short paragraphs. Write like the founders talk — direct, no filler.
 5. **CTA** — One action. Clear. "Book a 15-minute call" not "Learn more about our offerings"
 6. **PS** — Optional second hook, social proof, or personality moment
 

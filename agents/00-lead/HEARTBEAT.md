@@ -13,8 +13,8 @@
 - Compile overnight activity from all agents' daily logs
 - Surface any pending human decisions or approvals
 - Identify today's priority tasks from backlog
-- Check approval queue — anything waiting for Chad?
-- Draft morning briefing for Chad:
+- Check approval queue — anything waiting for the founders?
+- Draft morning briefing for the founders:
   - What happened since last briefing (2-3 bullets)
   - What's queued for today
   - Any decisions needed
@@ -25,10 +25,10 @@ cron: "0 23 * * 0"
 1. Read all agents' reflection.md files
 2. Assess bottlenecks, repeated failures, and pending proposals
 3. Autonomously grant safe tools (Tier 3) for identified needs
-4. Escalate high-risk grants to Chad (Tier 4) with recommendation
+4. Escalate high-risk grants to the founders (Tier 4) with recommendation
 5. Apply safe SOUL.md/AGENTS.md updates from proposals
 6. Review 90-day progress against success criteria
-7. Draft "CEO Weekly Report" for Chad:
+7. Draft "CEO Weekly Report" for the founders:
    - Squad output summary (content published, leads generated, pipeline status)
    - Agent performance highlights and issues
    - Tool grants made this week
@@ -50,4 +50,4 @@ cron: "0 2 * * *"
 - File-based monitoring > constant messaging
 - Don't report unchanged metrics — only surface changes and anomalies
 - Batch non-urgent findings into scheduled reports
-- Only interrupt Chad for genuine urgency (security incident, budget exceeded, agent down)
+- Only interrupt the founders for genuine urgency (security incident, budget exceeded, agent down)

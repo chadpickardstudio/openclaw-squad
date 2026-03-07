@@ -29,7 +29,7 @@ boundaries:
   can_execute: false
   can_write_external: false
   requires_approval_for:
-    - posting_to_social_platforms (Phase 1 — all posts through Chad)
+    - posting_to_social_platforms (Phase 1 — all posts through founders)
     - engaging_in_controversial_topics
     - brand_voice_changes_per_platform
 

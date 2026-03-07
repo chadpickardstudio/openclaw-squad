@@ -63,7 +63,7 @@ Key questions to answer:
 
 ## Initial Research Priorities (IntegrateAI Launch)
 
-1. SEO keyword research for chadpickard.studio — what can we rank for?
+1. SEO keyword research for integrate-ai.uk — what can we rank for?
 2. Competitor landscape — who else offers AI agent deployments for SMBs?
 3. Target audience analysis — where do small business owners hang out online?
 4. AI agent market trends — growth, pricing benchmarks, adoption curves

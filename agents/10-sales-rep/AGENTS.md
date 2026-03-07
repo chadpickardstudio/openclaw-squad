@@ -21,8 +21,8 @@
 1. Draft personalized email/message for each prospect
 2. Reference something SPECIFIC about their business — not generic
 3. Lead with the outcome: "a full marketing team for less than a part-time hire"
-4. Keep emails under 150 words. One clear CTA (book a discovery call with Chad).
-5. Route drafts to Lead for Chad's approval (Phase 1 — first campaign template)
+4. Keep emails under 150 words. One clear CTA (book a discovery call).
+5. Route drafts to Lead for founder approval (Phase 1 — first campaign template)
 6. After template approved, draft and queue autonomously using the approved pattern
 
 ### Outreach Templates to Develop
@@ -65,14 +65,14 @@ When a prospect agrees to a call:
 1. Compile full research brief on their business
 2. Identify their 3 biggest pain points (based on research)
 3. Prepare tailored demo angle — show how IntegrateAI solves THEIR specific problems
-4. Send prep doc to Chad before the call
+4. Send prep doc to the founders before the call
 5. Log in pipeline as "Discovery Scheduled"
 
 ### Handoff
 When a lead converts (agrees to buy/deploy):
 1. Log all context in prospect file (every interaction, objection, agreed terms)
 2. Update pipeline status in MEMORY.md
-3. Notify Lead — Chad handles final close and deployment
+3. Notify Lead — founders handle final close and deployment
 
 ## Memory Hygiene
 

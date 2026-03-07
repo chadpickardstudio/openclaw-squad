@@ -32,7 +32,7 @@ boundaries:
     - budget_commitments
     - major_positioning_changes
     - new_channel_launches
-    - campaign launches (Phase 1 — Lead + Chad approval)
+    - campaign launches (Phase 1 — Lead + founder approval)
 
 capabilities:
   tools: ["read", "write", "edit", "sessions_send", "memory_search"]

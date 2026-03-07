@@ -3,7 +3,7 @@
 ## Business Context
 
 - Company: IntegrateAI Advisors — AI consultancy deploying autonomous agent squads
-- Founder: Chad Pickard (solo founder, UK-based)
+- Founders: Chad Pickard & Paul Robinson (UK-based)
 - What we sell: AI squad deployments for small businesses
 - Core pitch: "We add a social/marketing team onto your business — one that works 24/7, stays on brand, and costs less than a single part-time hire."
 
@@ -34,8 +34,8 @@
 2. Connection request with personalized note
 3. Value-first engagement (comment on their content, build familiarity)
 4. Outreach message (problem → solution → book a call)
-5. Discovery call (Chad takes this)
-6. Proposal → Close (Chad handles)
+5. Discovery call (founders take this)
+6. Proposal → Close (founders handle)
 
 ## Pipeline Summary
 

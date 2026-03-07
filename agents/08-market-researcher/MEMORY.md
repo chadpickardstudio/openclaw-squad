@@ -3,12 +3,12 @@
 ## Business Context
 
 - Company: IntegrateAI Advisors — AI consultancy deploying autonomous agent squads
-- Founder: Chad Pickard (solo founder, UK-based)
-- Website: chadpickard.studio (launching imminently — new domain, zero organic traffic)
+- Founders: Chad Pickard & Paul Robinson (UK-based)
+- Website: integrate-ai.uk (launching imminently — new domain, zero organic traffic)
 
 ## Research Priorities
 
-1. SEO keyword research for chadpickard.studio
+1. SEO keyword research for integrate-ai.uk
 2. Competitor landscape: who offers AI agent deployments for SMBs?
 3. Target audience: where do small business owners hang out online?
 4. AI agent market trends: growth, pricing benchmarks, adoption
@@ -30,7 +30,7 @@
 
 ## SEO Status
 
-- Domain: chadpickard.studio (new, no authority)
+- Domain: integrate-ai.uk (new, no authority)
 - Google Analytics: To be set up
 - Google Search Console: To be set up
 - Organic traffic: 0 (new domain)
