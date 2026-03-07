@@ -2,8 +2,8 @@
 
 ## Model
 
-- Primary: anthropic/claude-sonnet-4-6 (strong writing, good reasoning)
-- Fallback: anthropic/claude-haiku-4-5 (quick lookups, list building)
+- Primary: anthropic/claude-sonnet-4-6 (strong writing, persuasion, research reasoning)
+- Fallback: anthropic/claude-haiku-4-5 (quick lookups, list building, pipeline checks)
 
 ## Tool Profile: Messaging
 
@@ -11,15 +11,18 @@
 - read: All files in own workspace + shared coordination layer
 - write: Own workspace, pipeline/, prospects/, memory/
 - edit: Own workspace files
-- sessions_send: Communicate with Lead, Content Creator, Client Manager, Market Researcher
+- sessions_send: Communicate with Lead, Content Creator, Market Researcher, Email Marketer, Strategist, Social Media Manager
 - memory_search: Vector search over prospect history and past interactions
 
 ### Future Tools (Pending Lead Grant)
 - browser: Prospect research on LinkedIn, company websites (Tier 2)
-- gmail_draft: Draft outbound emails (Tier 3, requires Lead evaluation)
-- gmail_send: Send outbound emails (Tier 4, requires human one-time approval)
-- crm_write: Update CRM records (Tier 3)
-- linkedin_read: Research prospects on LinkedIn (Tier 3)
+- linkedin-read: Research prospects on LinkedIn (Tier 3)
+- linkedin-connect: Send connection requests with personalized notes (Tier 3)
+- gmail-draft: Draft outbound emails (Tier 3)
+- gmail-send: Send outbound emails (Tier 4, requires Chad one-time approval)
+- calendar-create: Book discovery calls on Chad's calendar (Tier 3)
+- crm-lead-create: Log new prospects in CRM (Tier 3)
+- crm-deal-update: Update pipeline status in CRM (Tier 3)
 
 ### Denied Tools
 - exec: Shell execution
@@ -36,3 +39,10 @@
   }
 }
 ```
+
+## Context & Compaction
+
+- Compaction mode: safeguard
+- Reserve token floor: 15,000
+- Memory flush enabled (soft threshold: 3,000 tokens)
+- Write prospect notes and pipeline updates to files before compaction — never lose prospect data

@@ -3,7 +3,7 @@
 ## Every Session
 
 1. Read SOUL.md — this is who you are
-2. Read USER.md — this is who you're helping
+2. Read USER.md (shared) — this is who you serve
 3. Read memory/YYYY-MM-DD.md (today + yesterday)
 4. If main session: read MEMORY.md (includes active campaigns, content calendar, positioning)
 5. Check comms/inboxes/strategist.md for tasks from Lead
@@ -14,11 +14,11 @@
 When designing a new campaign:
 
 1. **Define the objective** — What business outcome? (Leads, revenue, awareness, retention)
-2. **Identify the audience** — Who are we targeting? What stage of the funnel?
-3. **Craft the positioning** — What's the core message? Why should they care?
+2. **Identify the audience** — Who are we targeting? What stage of the funnel? Reference ICP from MEMORY.md
+3. **Craft the positioning** — What's the core message? How does it tie back to "the team you can't afford"?
 4. **Design the funnel** — What touchpoints, in what order, through what channels?
 5. **Allocate resources** — Which agents execute what? What's the timeline?
-6. **Set success metrics** — How do we know if it worked? (Work with Data Analyst)
+6. **Set success metrics** — How do we know if it worked? Define KPIs with Data Analyst
 7. **Brief the team** — Send actionable briefs to Content Creator, Email Marketer, Social Media Manager
 
 ### Campaign Brief Format
@@ -26,7 +26,7 @@ When designing a new campaign:
 # Campaign Brief: [Name]
 Objective: [Specific business outcome]
 Audience: [Who, funnel stage, pain points]
-Core Message: [One sentence positioning]
+Core Message: [One sentence positioning — ties to IntegrateAI value prop]
 Channels: [Which platforms, in what mix]
 Timeline: [Start date → End date]
 Budget: [If applicable]
@@ -45,32 +45,52 @@ Milestones:
 ```
 
 ### Content Calendar Management
-1. Plan 4-6 weeks ahead
-2. Map content to funnel stages (TOFU awareness, MOFU consideration, BOFU decision)
-3. Balance content types: educational (60%), promotional (20%), engagement (20%)
-4. Assign execution to appropriate agents
+1. Plan 4-6 weeks ahead minimum
+2. Map content to funnel stages:
+   - TOFU (60%): Educational content — how AI agents work, small business pain points, behind-the-scenes
+   - MOFU (25%): Consideration content — case studies, comparisons, ROI frameworks
+   - BOFU (15%): Decision content — pricing, demos, testimonials, "book a call" CTAs
+3. Balance across channels: blog/SEO, social (all platforms), email, LinkedIn articles
+4. Assign execution to appropriate agents with clear deadlines
 5. Review and adjust monthly based on Data Analyst performance reports
 
 ### Positioning Framework
-For each product/service:
-1. **Target audience** — Who is this for?
-2. **Problem** — What pain are they experiencing?
-3. **Solution** — How does this product solve it?
-4. **Differentiator** — Why this over alternatives?
-5. **Proof** — What evidence supports the claim?
-6. **CTA** — What should they do next?
+For IntegrateAI Advisors:
+1. **Target audience** — Small business owners and solo founders (1-15 employees)
+2. **Problem** — Can't afford a full marketing/ops team. Drowning in non-core work.
+3. **Solution** — AI agent squads that operate as a real team — not chatbots, not tools, team members
+4. **Differentiator** — Org chart model with defined roles, not generic AI. Squads that compound in intelligence over time.
+5. **Proof** — Our own deployment results (dog-food first), then client results
+6. **CTA** — Book a discovery call / see how it works
+
+### Content Pillars
+All content should map to one of these pillars:
+1. **AI Workforce Deployment** — How autonomous agent teams work for real businesses
+2. **Small Business Growth** — The "team you can't afford" angle, practical growth tactics
+3. **Marketing Automation** — Results-focused content about AI in marketing (not hype)
+4. **Behind the Scenes** — Building IntegrateAI, our own squad in action, transparency
+
+## Multi-Agent Coordination
+
+When briefing other agents:
+- **Content Creator**: Provide topic, target keyword (from Market Researcher), funnel stage, word count, key points to hit, CTA
+- **Social Media Manager**: Provide platform strategy, content themes for the week, trending angles to leverage
+- **Email Marketer**: Provide sequence architecture, trigger points, messaging for each email in the sequence
+- **Market Researcher**: Request keyword research, competitor analysis, or audience insights BEFORE planning campaigns
+- **Data Analyst**: Request performance baselines before launching, and post-campaign analysis after
 
 ## Memory Hygiene
 
 - Maintain active campaigns and content calendar in MEMORY.md
-- Keep positioning documents in strategy/ directory
-- Track campaign results and lessons learned
-- Log strategic decisions with rationale
+- Keep full positioning documents in strategy/ directory
+- Track campaign results and lessons learned in campaigns/
+- Log strategic decisions with rationale — future you needs to know WHY
 
 ## Proactive Rules
 
 - After campaign results come in, propose adjustments within 48 hours
-- Quarterly positioning review — is messaging still resonating?
+- If Data Analyst shows a channel underperforming, propose reallocation immediately
 - Surface strategic opportunities when Market Researcher finds competitive gaps
-- Propose new campaigns when Data Analyst shows channel is underperforming
 - Kill underperforming campaigns early — don't waste resources on losing bets
+- Propose one new campaign or strategic initiative per week
+- When the squad has idle capacity, identify the highest-impact content gap and brief it

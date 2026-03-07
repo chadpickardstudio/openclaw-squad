@@ -1,46 +1,48 @@
 # MEMORY.md — Data Analyst
 
-## Core Context
+## Business Context
 
-- Squad: OpenClaw Multi-Agent Squad for Chad Pickard Studio
-- Product: AI agent squads for small businesses
-- Role: Turn data into insights that drive decisions
+- Company: IntegrateAI Advisors — AI consultancy deploying autonomous agent squads
+- Founder: Chad Pickard (solo founder, UK-based)
+- Stage: Pre-revenue, pre-launch — all metrics starting from zero
 
 ## KPI Targets
 
 | KPI | Target | Current | Status |
 |-----|--------|---------|--------|
-| MRR | TBD | $0 | Build phase |
+| MRR | TBD | £0 | Build phase |
 | CAC | TBD | N/A | No campaigns yet |
-| Churn rate | TBD | N/A | No clients yet |
-| Website traffic | TBD | N/A | |
-| Email list size | TBD | 0 | |
-| Social followers | TBD | 0 | |
+| Website traffic | TBD | 0 | Site launching |
+| Email list | TBD | 0 | ESP not selected |
+| Social followers | TBD | 0 | Platforms not activated |
+| Pipeline value | TBD | £0 | Outbound not started |
 
 ## Benchmarks (SaaS / B2B Services)
 
-| Metric | Industry Benchmark |
-|--------|--------------------|
-| CAC | $200-500 for SMB SaaS |
-| LTV:CAC ratio | 3:1 minimum |
-| Monthly churn | <5% for SMB |
-| Email open rate | 25-35% |
-| Landing page conversion | 2-5% |
-| Social engagement rate | 1-3% |
+| Metric | Industry Benchmark | Our Target |
+|--------|-------------------|------------|
+| CAC | $200-500 for SMB | TBD |
+| LTV:CAC ratio | 3:1 minimum | 3:1+ |
+| Monthly churn | <5% for SMB | <5% |
+| Email open rate | 25-35% | 30%+ |
+| Landing page conversion | 2-5% | 3%+ |
+| Social engagement rate | 1-3% | 2%+ |
 
 ## Report Schedule
 
 | Report | Day | Recipients |
 |--------|-----|-----------|
-| Weekly Dashboard | Monday AM | Lead, Strategist |
+| Weekly Dashboard | Monday 8am GMT | Lead, Strategist |
 | Content Performance | Biweekly | Content Creator, Social Media Mgr |
 | Email Analytics | Weekly | Email Marketer |
 | Monthly Deep Dive | 1st of month | Lead |
 | Funnel Analysis | Monthly | Lead, Sales Rep |
 
-## Active Data Sources
+## Analytics Stack
 
-(To be populated as integrations are granted)
+- Google Analytics: To be set up (after website launch)
+- Google Search Console: To be set up
+- Social platform analytics: To be set up (per platform)
+- Email analytics: To be set up (pending ESP selection)
 
-**CRITICAL**: Keep under 50 curated lines. This is a routing index, not a dump.
-Use reports/ for full reports and dashboards/ for dashboard templates.
+**CRITICAL**: Keep under 50 curated lines. Use reports/ for full reports, dashboards/ for templates.

@@ -1,27 +1,27 @@
 # 07-email-marketer
 
 **Department:** Marketing
-**Org Title:** Email Campaign Manager
-**Appears in:** 3 of 5 scenarios (common)
+**Org Title:** Email Campaign Manager — Email Channel Optimization
+**Business:** IntegrateAI Advisors
+**Appears in:** Marketing Machine, The Department, The Firm
 
 ## Role
 
-Email marketing and automation. Handles sequence design, list segmentation, A/B testing, drip campaigns, and newsletter production. Email is the highest-ROI digital marketing channel — this agent specializes in the strategy and execution that makes it work.
+Email marketing and automation for IntegrateAI Advisors. Handles sequence design, list segmentation, A/B testing, drip campaigns, newsletters, deliverability monitoring, and compliance. Builds the email channel from zero — list growth, welcome sequences, nurture flows, and sales sequences.
 
 ## Core Tasks
 
-- Email sequence design (welcome, nurture, re-engagement, win-back)
-- List segmentation and audience targeting
-- A/B testing (subject lines, send times, content variants)
-- Drip campaign architecture and automation
+- Email sequence design (welcome, nurture, sales, re-engagement, launch)
+- List building and segmentation strategy
+- A/B testing (subject lines, send times, content, CTAs)
 - Newsletter production and scheduling
-- Performance tracking (open rates, CTR, conversions)
 - Deliverability monitoring and list hygiene
+- Performance tracking (open rates, CTR, conversions)
+- Email compliance (CAN-SPAM, GDPR, UK data protection)
 
 ## Squad Presence
 
-- **The Operator (Tier 1):** No (Content Creator handles basic email in lean squads)
+- **The Operator (Tier 1):** No (Content Creator handles basic email)
 - **The Department (Tier 2):** Yes — dedicated email channel
+- **The Marketing Machine:** Yes — full email operation
 - **The Firm (Tier 3):** Yes — full email operation
-
-Agent blueprint pending. To be built from research docs.

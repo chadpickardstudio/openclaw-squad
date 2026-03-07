@@ -1,44 +1,55 @@
 # MEMORY.md — Strategist
 
-## Core Context
+## Business Context
 
-- Squad: OpenClaw Multi-Agent Squad for Chad Pickard Studio
-- Product: AI agent squads for small businesses
-- Role: Marketing strategy — campaigns, calendar, positioning, channel mix
+- Company: IntegrateAI Advisors — AI consultancy deploying autonomous agent squads
+- Founder: Chad Pickard (solo founder, UK-based)
+- Stage: Pre-revenue, pre-launch
+- Website: chadpickard.studio (launching imminently)
+
+## Strategic Priorities (90-Day)
+
+1. Launch website and establish online presence
+2. Build content engine across all platforms
+3. Activate outbound sales pipeline
+4. Land first paying client
+5. Establish repeatable sales process
 
 ## Brand Positioning
 
-- **Audience:** Small business owners (1-20 employees) overwhelmed with marketing/sales/admin
+- **Audience:** Small business owners / solo founders (1-15 employees) overwhelmed with marketing/sales/admin
 - **Problem:** Can't afford a full team, freelancers are inconsistent, agencies are expensive
-- **Solution:** AI agent squads that operate as a real team — not chatbots, not tools, but team members
-- **Differentiator:** Org chart model — agents with defined roles, not generic AI. Tiered products that grow with the business.
-- **Proof:** (To be populated — own dog-food deployment results first)
+- **Solution:** AI agent squads — not chatbots, not tools, a full team
+- **Differentiator:** Org chart model with defined roles. Squads compound in intelligence. Costs less than a single hire.
+- **Core line:** "Adding a social/marketing team onto a business that can't afford one"
+- **Proof:** (Dog-food deployment results — to be populated)
 
 ## Content Calendar
 
 | Week | TOFU (Awareness) | MOFU (Consideration) | BOFU (Decision) |
 |------|-------------------|---------------------|-----------------|
-| (To be populated) | | | |
-
-## Active Campaigns
-
-| Campaign | Objective | Status | KPIs |
-|----------|-----------|--------|------|
-| (None yet — squad in build phase) | | | |
+| (To be populated after first strategic review) | | | |
 
 ## Channel Mix
 
 | Channel | Priority | Owner | Status |
 |---------|----------|-------|--------|
 | Blog/SEO | High | Content Creator | Not started |
+| LinkedIn | High | Social Media Manager | Not started |
 | Email | High | Email Marketer | Not started |
-| LinkedIn | Medium | Social Media Manager | Not started |
 | X/Twitter | Medium | Social Media Manager | Not started |
+| Instagram | Medium | Social Media Manager | Not started |
 | Outbound | High | Sales Rep | Not started |
 
-## Strategic Decisions
+## Growth Levers
 
-(To be populated)
+1. Content marketing (SEO + social) → inbound leads
+2. LinkedIn outbound → direct pipeline
+3. Case studies from first clients → social proof
+4. Referrals → compounding growth
 
-**CRITICAL**: Keep under 50 curated lines. This is a routing index, not a dump.
-Use strategy/ for full positioning docs and campaigns/ for campaign plans.
+## Active Campaigns
+
+(None yet — squad in build phase)
+
+**CRITICAL**: Keep under 50 curated lines. Use strategy/ for full positioning docs, campaigns/ for plans.

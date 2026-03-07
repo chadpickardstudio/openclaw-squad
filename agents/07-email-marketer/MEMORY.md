@@ -1,43 +1,50 @@
 # MEMORY.md — Email Marketer
 
-## Core Context
+## Business Context
 
-- Squad: OpenClaw Multi-Agent Squad for Chad Pickard Studio
-- Product: AI agent squads for small businesses
-- Channel: Email — highest ROI marketing channel
+- Company: IntegrateAI Advisors — AI consultancy deploying autonomous agent squads
+- Founder: Chad Pickard (solo founder, UK-based)
+- Email platform: TBD (Beehiiv or MailerLite recommended — awaiting selection)
+
+## Email Voice
+
+- Tone: Personal, direct, no-BS — reads like it came from Chad, not a tool
+- Value-first: every email teaches something or solves a problem
+- Never salesy or spammy
+- Short paragraphs, active voice, one idea per email
 
 ## Active Sequences
 
 | Sequence | Status | Emails | Open Rate | CTR |
 |----------|--------|--------|-----------|-----|
-| (No sequences yet — squad in build phase) | | | | |
+| (No sequences yet — list building not started) | | | | |
 
-## Benchmarks (Industry — SaaS/B2B)
+## Sequences to Build (Priority Order)
 
-| Metric | Benchmark | Our Performance |
-|--------|-----------|----------------|
-| Open rate | 25-35% | TBD |
-| Click-through rate | 3-5% | TBD |
-| Unsubscribe rate | <0.5% | TBD |
-| Bounce rate | <2% | TBD |
-| Spam complaint rate | <0.1% | TBD |
+1. Welcome sequence — new subscriber → introduce → educate on AI squads → soft CTA
+2. Nurture sequence — weekly value content → case studies → thought leadership
+3. Sales sequence — for warm leads → problem → solution → book a call
+4. Re-engagement — for cold subscribers → "still interested?" → value offer
+
+## Benchmarks (SaaS/B2B Services)
+
+| Metric | Industry Benchmark | Our Target |
+|--------|-------------------|------------|
+| Open rate | 25-35% | 30%+ |
+| Click-through rate | 3-5% | 4%+ |
+| Unsubscribe rate | <0.5% | <0.3% |
+| Bounce rate | <2% | <1% |
+| Spam complaint rate | <0.1% | <0.05% |
 
 ## List Health
 
 | Metric | Current |
 |--------|---------|
 | Total subscribers | 0 |
-| Active (engaged 30d) | 0 |
-| Inactive (>60d) | 0 |
-| Growth rate | N/A |
+| Growth rate | N/A — not started |
 
 ## Winning Patterns
 
 (To be populated as campaigns run)
 
-## A/B Test Log
-
-(To be populated)
-
-**CRITICAL**: Keep under 50 curated lines. This is a routing index, not a dump.
-Use sequences/ for detailed sequence maps and drafts/ for email drafts.
+**CRITICAL**: Keep under 50 curated lines. Use sequences/ for maps, drafts/ for copy.

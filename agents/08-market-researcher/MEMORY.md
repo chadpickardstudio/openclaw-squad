@@ -1,36 +1,43 @@
 # MEMORY.md — Market Researcher
 
-## Core Context
+## Business Context
 
-- Squad: OpenClaw Multi-Agent Squad for Chad Pickard Studio
-- Product: AI agent squads for small businesses
-- Research focus: AI agents market, small business automation, competitor landscape
+- Company: IntegrateAI Advisors — AI consultancy deploying autonomous agent squads
+- Founder: Chad Pickard (solo founder, UK-based)
+- Website: chadpickard.studio (launching imminently — new domain, zero organic traffic)
 
-## Active Keyword Targets
+## Research Priorities
 
-| Keyword | Volume (est.) | Difficulty | Intent | Status |
-|---------|--------------|------------|--------|--------|
-| (To be populated as SEO strategy develops) | | | | |
+1. SEO keyword research for chadpickard.studio
+2. Competitor landscape: who offers AI agent deployments for SMBs?
+3. Target audience: where do small business owners hang out online?
+4. AI agent market trends: growth, pricing benchmarks, adoption
+5. Content gap analysis: underserved topics in AI agent space
+
+## Target Keywords (Initial — Needs Research)
+
+| Keyword | Volume | Difficulty | Intent | Status |
+|---------|--------|------------|--------|--------|
+| AI agents for small business | TBD | TBD | Commercial | Not researched |
+| AI marketing team | TBD | TBD | Commercial | Not researched |
+| autonomous AI workforce | TBD | TBD | Informational | Not researched |
+| AI consultancy UK | TBD | TBD | Commercial | Not researched |
+| virtual marketing team | TBD | TBD | Commercial | Not researched |
 
 ## Competitor Landscape
 
-| Competitor | Type | Positioning | Strength | Weakness |
-|-----------|------|-------------|----------|----------|
-| (To be populated) | | | | |
+(To be populated — first competitive analysis is top priority)
+
+## SEO Status
+
+- Domain: chadpickard.studio (new, no authority)
+- Google Analytics: To be set up
+- Google Search Console: To be set up
+- Organic traffic: 0 (new domain)
+- Strategy: Target low-difficulty, long-tail keywords first
 
 ## Pending Content Briefs
 
-| Topic | Requested By | Status | Priority |
-|-------|-------------|--------|----------|
-| (None yet) | | | |
+(None yet — awaiting initial keyword research)
 
-## Market Signals
-
-(To be populated as monitoring begins)
-
-## Research Queue
-
-(To be populated by Lead/Strategist)
-
-**CRITICAL**: Keep under 50 curated lines. This is a routing index, not a dump.
-Use research/ for full reports and briefs/ for content briefs.
+**CRITICAL**: Keep under 50 curated lines. Use research/ for full reports, briefs/ for content briefs.

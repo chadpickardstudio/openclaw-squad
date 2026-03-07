@@ -1,27 +1,26 @@
 # 06-social-media-manager
 
 **Department:** Marketing
-**Org Title:** Social Media Manager
-**Appears in:** 4 of 5 scenarios (universal)
+**Org Title:** Social Media Manager — Social Presence & Community
+**Business:** IntegrateAI Advisors
+**Appears in:** Marketing Machine, The Department, The Firm
 
 ## Role
 
-Social media presence and community management. Handles post scheduling, community engagement, trend monitoring, reply management, and platform-native content creation. Operationally distinct from Content Creator — lives in scheduling tools and social platforms, not docs and CMS.
+Social media presence and community management for IntegrateAI Advisors across all platforms. Handles post creation, scheduling, community engagement, trend monitoring, and platform-native content. Adapts brand voice to each platform while maintaining core identity. Distinct from Content Creator — lives in social platforms, not docs and CMS.
 
 ## Core Tasks
 
-- Post scheduling and content calendar execution
-- Community engagement and reply management
-- Trend monitoring and newsjacking
-- Hashtag strategy and platform optimization
-- Platform-native content (stories, reels, threads, carousels)
-- Social listening and sentiment tracking
-- Review and reputation management (Google reviews, testimonial collection)
+- Daily post creation and scheduling across LinkedIn, X, Instagram, TikTok, Facebook
+- Community engagement — reply to all comments, build ICP relationships
+- Trend monitoring and newsjacking relevant to AI and small business
+- Platform-native content creation (threads, carousels, reels, stories)
+- Content repurposing (adapt Content Creator's long-form into social variants)
+- Weekly engagement reporting to Lead/Strategist
 
 ## Squad Presence
 
-- **The Operator (Tier 1):** No (Content Creator covers basic social in lean squads)
+- **The Operator (Tier 1):** No (Content Creator covers basic social)
 - **The Department (Tier 2):** Yes — dedicated social presence
+- **The Marketing Machine:** Yes — full social operation
 - **The Firm (Tier 3):** Yes — full social operation
-
-Agent blueprint pending. To be built from research docs.
