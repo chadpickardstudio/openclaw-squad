@@ -37,9 +37,9 @@ These are the minimum tools to get the squad operational.
 
 | Tool | Function | Plan | Cost | Why This One |
 |------|----------|------|------|-------------|
-| **Framer** | Website | Mini ($5/mo) | £5/mo | Beautiful, fast, SEO-friendly, no-code. Perfect for a consultancy landing page. Custom domain included. |
-| **Ghost** | Blog + Newsletter | Starter ($9/mo) | £8/mo | Blog AND email newsletters in one tool. Built-in subscriber management. Clean, fast, SEO-optimised. |
-| **HubSpot CRM** | Sales pipeline | Free | £0 | Unlimited contacts, deals, pipeline tracking. Best free CRM. Sales Rep needs this. |
+| **Framer** | Website | Mini ($5/mo) | £4/mo | Beautiful, fast, SEO-friendly, no-code. Perfect for a consultancy landing page. Custom domain included. 1 page, basic analytics. |
+| **Ghost** | Blog + Newsletter | Starter ($11/mo) | £9/mo | Blog AND email newsletters in one tool. Built-in subscriber management. Clean, fast, SEO-optimised. Up to 500 members. |
+| **HubSpot CRM** | Sales pipeline | Free | £0 | Up to 1,000 contacts, deals, pipeline tracking. Best free CRM. Sales Rep needs this. |
 | **Cal.com** | Discovery call booking | Free | £0 | Open-source Calendly alternative. Unlimited event types. Integrates with Google Calendar. |
 | **Buffer** | Social scheduling | Free (3 channels) | £0 | Schedule posts on LinkedIn, X, Instagram. 10 posts per channel queued. Enough for launch. |
 | **Canva** | Design (social graphics) | Free | £0 | Social media graphics, blog headers, carousels. Free tier covers 90% of needs. |
@@ -48,7 +48,7 @@ These are the minimum tools to get the squad operational.
 | **Notion** | Internal docs + tasks | Free | £0 | Content calendar, meeting notes, process docs. Free for small teams. |
 | **Domain** | integrate-ai.uk | Annual | ~£10/yr | .uk domain — trustworthy for UK market. |
 
-**Launch day total: ~£15-20/month + £10/yr domain**
+**Launch day total: ~£13-15/month + £10/yr domain**
 
 ---
 
@@ -58,13 +58,13 @@ Upgrade when you're generating revenue and need more capacity.
 
 | Tool | Function | Plan | Cost | When to Add |
 |------|----------|------|------|------------|
-| **Beehiiv** | Advanced email | Scale ($49/mo) | £40/mo | When you outgrow Ghost's newsletter features or need advanced automations, segmentation, and A/B testing |
-| **Buffer** | Social (all channels) | Essentials ($6/channel/mo) | £30/mo | When you need to schedule across 5 channels (LinkedIn, X, Instagram, TikTok, Facebook) |
-| **Canva Pro** | Advanced design | Pro ($13/mo) | £11/mo | When you need brand kit, background remover, premium templates, resize magic |
+| **Beehiiv** | Advanced email | Scale ($49/mo) | £40/mo | When you outgrow Ghost's newsletter features or need advanced automations, segmentation, and A/B testing. Free tier supports up to 2,500 subs — start free, upgrade when needed. |
+| **Buffer** | Social (all channels) | Essentials ($5/channel/mo) | £25/mo | When you need to schedule across 5 channels (LinkedIn, X, Instagram, TikTok, Facebook) |
+| **Canva Pro** | Advanced design | Pro ($10/mo annual) | £8/mo | When you need brand kit, background remover, premium templates, resize magic |
 | **Ubersuggest** | SEO + keywords | Individual ($29/mo) | £24/mo | When Market Researcher needs keyword volume data, SERP analysis, competitor tracking |
-| **Framer** | Website (upgraded) | Basic ($15/mo) | £13/mo | When you need CMS collections, more pages, analytics |
+| **Framer** | Website (upgraded) | Basic ($15/mo) | £12/mo | When you need CMS collections, more pages, analytics |
 
-**Growth total: ~£80-120/month**
+**Growth total: ~£70-110/month**
 
 ---
 
@@ -77,7 +77,7 @@ Full professional stack when revenue supports it.
 | **Ahrefs** | Enterprise SEO | Lite ($29/mo) | £24/mo | Replaces Ubersuggest when you need backlink analysis, content gap analysis, rank tracking at scale |
 | **HubSpot** | CRM (paid) | Starter ($20/mo) | £17/mo | Email integration, meeting links, sequences, reporting |
 | **Later/Hootsuite** | Social (enterprise) | Pro ($25/mo) | £21/mo | Advanced scheduling, analytics, team workflows, more platforms |
-| **Stripe** | Payments | Pay-as-you-go | 1.4% + 20p | When you're processing client payments |
+| **Stripe** | Payments | Pay-as-you-go | 1.5% + 20p | When you're processing client payments (UK pricing) |
 | **Loom** | Video demos | Business ($15/mo) | £13/mo | Recorded demos for prospects, async client comms |
 | **Zapier** | Automation | Starter ($20/mo) | £17/mo | Connect tools together — CRM to email, form to Slack, etc. |
 
@@ -117,11 +117,11 @@ If you want ONE tool for website + blog + email:
 ### Alternative: Framer + Beehiiv (Skip Ghost)
 
 - **Framer** for website + blog (Framer has a blog CMS)
-- **Beehiiv Free** for email (up to 1,000 subscribers)
+- **Beehiiv Free** for email (up to 2,500 subscribers)
 - Downside: Framer's blog is less mature than Ghost's
 - Upside: Beehiiv's email features are stronger from day one
 
-**My recommendation: Framer + Ghost** for Tier 1. Best of both worlds at £13/month.
+**My recommendation: Framer + Ghost** for Tier 1. Best of both worlds at ~£13/month.
 
 ---
 
@@ -196,8 +196,8 @@ If you want ONE tool for website + blog + email:
 
 | Stage | Monthly Cost | What You Get |
 |-------|-------------|-------------|
-| **Launch** | £15-20/mo | Website + blog + newsletter + CRM + scheduling + social (3 channels) + analytics + design |
-| **Growth** | £80-120/mo | + advanced email + all social channels + SEO tool + pro design |
+| **Launch** | ~£13-15/mo | Website + blog + newsletter + CRM + scheduling + social (3 channels) + analytics + design |
+| **Growth** | £70-110/mo | + advanced email + all social channels + SEO tool + pro design |
 | **Scale** | £200-300/mo | + enterprise SEO + paid CRM + advanced social + payments + automation |
 
 All prices exclude API costs for running the AI squad (~£7-15/month depending on usage).
@@ -211,7 +211,7 @@ All prices exclude API costs for running the AI squad (~£7-15/month depending o
 | **Website builder** | Framer vs Ghost vs WordPress | **Framer** — fastest to beautiful, best for consultancy |
 | **Blog platform** | Ghost vs Framer blog vs WordPress | **Ghost** — best for SEO + newsletter combo |
 | **ESP (launch)** | Ghost newsletter vs Beehiiv free vs MailerLite free | **Ghost** — already paying for blog, newsletter included |
-| **CRM** | HubSpot vs Notion vs spreadsheet | **HubSpot Free** — proper pipeline, free forever |
+| **CRM** | HubSpot vs Notion vs spreadsheet | **HubSpot Free** — proper pipeline, up to 1,000 contacts |
 | **Booking** | Cal.com vs Calendly | **Cal.com** — free, open-source, no branding |
 | **Social scheduler** | Buffer vs Later vs manual | **Buffer Free** — 3 channels, 10 posts each, enough to start |
 | **Design** | Canva vs Figma vs manual | **Canva Free** — social graphics, templates, instant |
