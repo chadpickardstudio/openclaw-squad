@@ -6,6 +6,8 @@ on:
 jobs:
   setup:
     runs-on: ubuntu-latest
+    permissions:
+      issues: write
     steps:
       - uses: actions/checkout@v4
 
@@ -14,13 +16,20 @@ jobs:
           node-version: "22"
 
       - name: Run Notion setup
+        id: notion
         env:
           NOTION_API_KEY: ${{ secrets.NOTION_API_KEY }}
-        run: node scripts/setup-notion.mjs 2>&1 | tee /tmp/notion-output.txt
+        run: |
+          node scripts/setup-notion.mjs 2>&1 | tee /tmp/notion-output.txt
+          echo "output<<ENDOFOUTPUT" >> $GITHUB_OUTPUT
+          cat /tmp/notion-output.txt >> $GITHUB_OUTPUT
+          echo "ENDOFOUTPUT" >> $GITHUB_OUTPUT
 
-      - name: Upload output
+      - name: Post output as issue
         if: always()
-        uses: actions/upload-artifact@v4
-        with:
-          name: notion-setup-output
-          path: /tmp/notion-output.txt
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh issue create \
+            --title "Notion Setup Output (Run #${{ github.run_number }})" \
+            --body "$(cat /tmp/notion-output.txt)" || echo "Failed to create issue"
