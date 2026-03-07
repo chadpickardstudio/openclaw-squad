@@ -16,4 +16,11 @@ jobs:
       - name: Run Notion setup
         env:
           NOTION_API_KEY: ${{ secrets.NOTION_API_KEY }}
-        run: node scripts/setup-notion.mjs
+        run: node scripts/setup-notion.mjs 2>&1 | tee /tmp/notion-output.txt
+
+      - name: Upload output
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: notion-setup-output
+          path: /tmp/notion-output.txt
