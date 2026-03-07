@@ -15,15 +15,11 @@ jobs:
         with:
           node-version: "22"
 
-      - name: Run Notion setup
-        id: notion
+      - name: Run fresh Notion setup
         env:
           NOTION_API_KEY: ${{ secrets.NOTION_API_KEY }}
         run: |
-          node scripts/setup-notion.mjs 2>&1 | tee /tmp/notion-output.txt
-          echo "output<<ENDOFOUTPUT" >> $GITHUB_OUTPUT
-          cat /tmp/notion-output.txt >> $GITHUB_OUTPUT
-          echo "ENDOFOUTPUT" >> $GITHUB_OUTPUT
+          node scripts/notion-fresh-setup.mjs 2>&1 | tee /tmp/notion-output.txt
 
       - name: Post output as issue
         if: always()
@@ -31,5 +27,5 @@ jobs:
           GH_TOKEN: ${{ github.token }}
         run: |
           gh issue create \
-            --title "Notion Setup Output (Run #${{ github.run_number }})" \
+            --title "Notion Fresh Setup (Run #${{ github.run_number }})" \
             --body "$(cat /tmp/notion-output.txt)" || echo "Failed to create issue"
